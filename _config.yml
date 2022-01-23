@@ -17,9 +17,9 @@ dark-theme: true
 # and specify source (external or local).
 resume: true
 resume-external: true
-resume-url: https://google.com/?q=my+resume
+resume-url: https://GitHub/Israpps
 
-url: https://sergiokopplin.github.io/indigo
+url: https://israpps.github.io/indigo
 # your url: https://USERNAME.github.io
 
 permalink: /:title/
@@ -34,11 +34,11 @@ disqus:
 
 # if you don't have any of social below, comment the line
 facebook: myfacebook
-twitter: mytwitter
-instagram: myinstagram
-linkedin: mylinkedin
-github: mygithub
-email: myemail@gmail.com
+#twitter: mytwitter
+#instagram: myinstagram
+#linkedin: mylinkedin
+github: israpps
+email: israelson-matias@hotmail.com
 
 authors:
   johndoe:
