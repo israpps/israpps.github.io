@@ -7,7 +7,7 @@ description: A blog about technology and stuff related
 
 # if it's an external image, update below for true
 # better with square images
-external-image: false
+external-image: true
 picture: assets/images/Dyson.png
 
 # your site color theme, false to light theme
@@ -19,7 +19,7 @@ resume: true
 resume-external: true
 resume-url: https://GitHub/Israpps
 
-url: https://israpps.github.io/indigo
+url: https://israpps.github.io
 # your url: https://USERNAME.github.io
 
 permalink: /:title/
