@@ -1,34 +1,26 @@
 ---
-title: ":ramen: Indigo, minimalist jekyll theme"
+title: "FunTuna Fork"
 layout: post
-date: 2016-01-23 22:10
-tag: jekyll
-image: https://sergiokopplin.github.io/indigo/assets/images/jekyll-logo-light-solid.png
+date: 2021-01-20 00:10
+tag: FreeMcBoot
+image: https://github.com/israpps/Funtuna-Fork/blob/main/logos%20%26%20others/github%20logo.png
 headerImage: true
 projects: true
 hidden: true # don't count this post in blog pagination
-description: "This is a simple and minimalist template for Jekyll for those who likes to eat noodles."
+description: "A homebrew PS2 Application launcher specifically designed for FreeMcBoot incompatible PS2 units and non-magicgate-compliant memory cards"
 category: project
-author: johndoe
+author: israpps
 externalLink: false
 ---
 
-![Screenshot](https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png)
+FunTuna Fork is a Fork (duh) of the FunTuna project by @HowlingWolfHWC
 
-Example of project - Indigo Minimalist Jekyll Template - [Demo](https://sergiokopplin.github.io/indigo/). This is a simple and minimalist template for Jekyll for those who likes to eat noodles.
+various bugs where fixed, the bundled software was updated, the package was re-structured to avoid unnecesary risks of changing the date of the hacked icon (vital for the usage of this program) and many more changes.
 
----
+A custom installer based on OpenTuna Installer was made with the purpose of making the user´s like easier.
 
-What has inside?
+up to date, this project can be used on every PS2 excluding the ProtoKernel PS2 units (`SCPH-10000` and `SCPH-15000`) and the [PSX](https://wikipedia.org/wiki/PSX).
 
-- Gulp
-- BrowserSync
-- Stylus
-- SVG
-- No JS
-- [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F)
 
----
 
-[Check it out](https://sergiokopplin.github.io/indigo/) here.
-If you need some help, just [tell me](https://github.com/sergiokopplin/indigo/issues).
+### [Download](https://github.com/israpps/FunTuna-Fork/releases)
