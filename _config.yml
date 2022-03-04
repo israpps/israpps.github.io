@@ -11,8 +11,8 @@ disqus_shortname:   default
 
 # Social
 analytics-id:       "default"
-twitter:            default
-facebook:           default
+#twitter:            default
+#facebook:           default
 #instagram:          default
 github:             israpps
 youtube:            https://www.youtube.com/channel/UC6lrebmEMVThVXUm9VJhhQg
