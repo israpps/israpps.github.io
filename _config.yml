@@ -25,7 +25,7 @@ email:              israelson-matias@hotmail.com # change this to your email to 
 background_image:   /images/isr_bg.jpg
 # Tip: The color palette and other styles can be configured in /_sass/lib/_vars.scss
 slapform_thankyou_page: /thank-you
-
+ps2_posts: /_postsPS2/
 defaults:
 - scope:
     path: ''
