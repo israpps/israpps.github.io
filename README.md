@@ -1,69 +1,74 @@
-<p align="center">
-    <h2 align="center">Indigo Minimalist Jekyll Template - <a href="https://sergiokopplin.github.io/indigo/">Demo</a></h2>
-</p>
+# Massively
+> This is Massively, a text-heavy, article-oriented design built around a huge background
+image.
 
-<p align="center">This is a simple and minimalist template for Jekyll for those who likes to eat noodles.</p>
+See a preview of the Massively Jekyll Theme here: [https://iwiedenm.github.io/jekyll-theme-massively/](https://iwiedenm.github.io/jekyll-theme-massively/). <br>
+Massively was originally designed by HTML5UP and Jekyll was integrated by [JekyllUp: Jekyll Themes](https://jekyllup.com)
 
-***
+## How to Use This Theme
+Jekyll consumes themes in two flavors; gem-based or spread across multiple folders
+in the site source. This port is of the second type. Concretely, it means that you
+can simply grab the [zip][zip] or clone this repository, run `bundle install`
+in the new directory and finally `bundle exec jekyll serve`.
+You can now access your brand-new Jekyll site on [http://127.0.0.1:4000/][local].
+Enjoy!
 
-<p align="center">
-    <b><a href="README.md#what-has-inside">What has inside</a></b>
-    |
-    <b><a href="README.md#setup">Setup</a></b>
-    |
-    <b><a href="README.md#settings">Settings</a></b>
-    |
-    <b><a href="README.md#how-to">How to</a></b>
-</p>
+If you're completely new to Jekyll, check out it's [documentation][jekyll] first.
+It's not too hard, we promise!
 
-<p align="center">
-    Light and Dark themes.
-</p>
+[zip]: https://github.com/iwiedenm/jekyll-theme-massively-src/archive/master.zip
+[local]: http://127.0.0.1:4000/
+[jekyll]: https://jekyllrb.com/
 
-<p align="center">
-    <img src="https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/assets/screen-shot.png" />
-</p>
+## Features
 
-## What has inside
+### Slapform.com Integration
+[Slapform](https://slapform.com) is supported out of the box! Just add your email to ```_config.yml``` and test the form.
+Every time one of your visitors submits the form, you'll get an email straight to your inbox containing the submission so you can get back to them right away. Slapform is very extendable, including AJAX submissions, webhooks, and more.
 
-- [Jekyll](https://jekyllrb.com/), [Sass](https://sass-lang.com/) ~[RSCSS](https://rscss.io/)~ and [SVG](https://www.w3.org/Graphics/SVG/);
-- Google Speed: [98/100](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fsergiokopplin.github.io%2Findigo%2F);
-- No JS. :sunglasses:
-
-## Setup
-
-0. :star: to the project. :metal:
-1. Fork the project [Indigo](https://github.com/sergiokopplin/indigo/fork)
-2. Edit `_config.yml` with your data (check <a href="README.md#settings">settings</a> section)
-3. Write some posts :bowtie:
-
-If you want to test locally on your machine, do the following steps also:
-
-1. Install [Jekyll](https://jekyllrb.com) and [Bundler](https://bundler.io/).
-2. Clone the forked repo on your machine
-3. Enter the cloned folder via terminal and run `bundle install`
-4. Then run `bundle exec jekyll serve`
-5. Open it in your browser: `http://localhost:4000`
-6. Do you want to use the [jekyll-admin](https://jekyll.github.io/jekyll-admin/) plugin to edit your posts? Go to the admin panel: `http://localhost:4000/admin`. The admin panel will not work on GitHub Pages, [only locally](https://github.com/jekyll/jekyll-admin/issues/341#issuecomment-292739469).
-
-## Settings
-
-You must fill some informations on `_config.yml` to customize your site.
-
+### Auto-Generating Sitemap
+The sitemap is auto generated! Just simply change the sitemap variable in front matter of each page. It looks like so...
 ```
-name: John Doe
-bio: 'A Man who travels the world eating noodles'
-picture: 'assets/images/profile.jpg'
-...
-
-and lot of other options, like width, projects, pages, read-time, tags, related posts, animations, multiple-authors, etc.
+sitemap:
+  priority: 0.7
+  lastmod: 2017-11-02
+  changefreq: weekly
 ```
 
-## How To?
+## Credits
+### Original README from HTML5 UP
+```
+Massively by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
-Check the [FAQ](./FAQ.md) if you have any doubt or problem.
 
----
-## License
+This is Massively, a text-heavy, article-oriented design built around a huge background
+image (with a new parallax implementation I'm testing) and scroll effects (powered by
+Scrollex). A *slight* departure from all the one-pagers I've been doing lately, but one
+that fulfills a few user requests and makes use of some new techniques I've been wanting
+to try out. Enjoy it :)
 
-[MIT](https://kopplin.mit-license.org/) License © Sérgio Kopplin
+Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
+you can use for pretty much whatever.
+
+(* = not included)
+
+AJ
+aj@lkn.io | @ajlkn
+
+
+Credits:
+
+	Demo Images:
+		Unsplash (unsplash.com)
+
+	Icons:
+		Font Awesome (fortawesome.github.com/Font-Awesome)
+
+	Other:
+		jQuery (jquery.com)
+		Misc. Sass functions (@HugoGiraudel)
+		Skel (skel.io)
+		Scrollex (github.com/ajlkn/jquery.scrollex)
+```
