@@ -1,0 +1,8 @@
+---
+layout: post
+title:  "wLaunchELF 4.43x_isr_hdd"
+date:   2021-1-20
+categories: PS2
+excerpt: "A wLaunchELF mod capable of injecting files into the extended attribute arear (header) of PlayStation 2 formatted internal HDD"
+image: "/images/wLaunchELF_ISR_HDD.jpg"
+---
