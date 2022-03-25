@@ -24,9 +24,7 @@ When I reached 5th year of primary school, I started Studying English in A.A.C.I
 
 ### My relation with software development
 
-  <p>
-<!--<div class="box">
--->
+
 My interest in software development began in 2015 aproximately, A few months after discovering about the existence of PS2 Homebrew, I decided to update wLaunchELF on my PS2 (A very famous PS2 Filebrowser), when I extracted the package it included the source code inside, after reading one files (just for curiosity) I decided that I had to learn how to do the same, no matter how much time it takes.
 
 Obviously, I couldn't dedicate too much time to learn the basics because attending school + A.A.C.I was ridiculously time-consuming. So I couldn´t make substancial progress on this.
@@ -47,8 +45,5 @@ as time passed I started to learn a bit of pure C and the basic usage of wxWidge
 
 I try to learn a bit every day about this fascinating world of software development.
 
-<!--
-</div>-->
 
-  </p>
 
