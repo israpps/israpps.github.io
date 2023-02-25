@@ -1,6 +1,7 @@
 ---
 title: HDL Batch Installer
 subtitle: A windows GUI for installing PS2 Games and managing a PS2 APA formatted Hard Drive
+header_img: "https://github.com/israpps/HDL-Batch-installer/blob/main/HDL-Batch-installer-SRC/gfx/BOOT_SPLASH.png?raw=true"
 tags: [PS2, Windows, UI]
 categories: [Projects]
 ---
@@ -31,6 +32,7 @@ since a long time. the PS2 homebrew community needed a good tool to manage PS2 I
 - [x] Delete and create Partitions
 - [x] Format any Hard Drive into the required format
 
+***
 
 [Download](https://www.psx-place.com/resources/hdl-batch-installer.1173/download?version=2436){: .btn .btn-outline-primary }
 [Github Repository](https://github.com/israpps/HDL-Batch-installer){: .btn .btn-outline-primary }
