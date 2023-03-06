@@ -42,5 +42,5 @@ Download
     <label><input type="checkbox" name="xfrom"> XFROM</label>
   </div>
   <input readonly name="url">
-  <a name="DL" href="#" class="btn btn-outline-primary">jhhghj</a>
+  <a name="dl" href="" class="btn btn-outline-primary">Download</a>
 </form>
