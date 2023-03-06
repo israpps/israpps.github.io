@@ -34,11 +34,16 @@ Download
 
 <form id="form" method="get" onchange="update()">
   <div id="features">
-    <label><input type="checkbox" name="exfat"> EXFAT</label> </br>
-    <label><input type="checkbox" name="no_network"> No Network</label> </br>
-    <label><input type="checkbox" name="ds34"> DS34</label> </br>
-    <label><input type="checkbox" name="mx4sio"> MX4SIO</label> </br>
-    <label><input type="checkbox" name="xfrom"> XFROM</label> </br>
+    <label><input type="checkbox" name="exfat"> EXFAT</label>
+    
+    <label><input type="checkbox" name="no_network"> No Network</label>
+    
+    <label><input type="checkbox" name="ds34"> DS34</label>
+    
+    <label><input type="checkbox" name="mx4sio"> MX4SIO</label>
+    
+    <label><input type="checkbox" name="xfrom"> XFROM</label>
+    
   </div>
   <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return false;">Download</a>
 </form>
