@@ -25,6 +25,7 @@ function update() {
   bits.push(".ELF");
   var url = bits.join("");
   form.url.value = url;
+  form.dl.href + url;
 }
 update();
 </script>
@@ -41,4 +42,5 @@ Download
     <label><input type="checkbox" name="xfrom"> XFROM</label>
   </div>
   <input readonly name="url">
+  <a name="DL" href="#" class="btn btn-outline-primary">jhhghj</a>
 </form>
