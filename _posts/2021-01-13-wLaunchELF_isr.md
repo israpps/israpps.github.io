@@ -25,7 +25,7 @@ function update() {
   bits.push(".ELF");
   var url = bits.join("");
   form.url.value = url;
-  document.getElementById("wledl").setAttribute("href",url);;
+  document.getElementById("wledl").setAttribute("href",url);
 }
 update();
 </script>
