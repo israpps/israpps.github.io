@@ -29,7 +29,8 @@ function update() {
 update();
 </script>
 
-Download
+## Download
+
 > choose the features you want and download
 
 <form id="form" method="get" onchange="update()">
