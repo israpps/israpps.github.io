@@ -35,15 +35,15 @@ update();
 
 <form id="form" method="get" onchange="update()">
   <div id="features">
-    <label><input type="checkbox" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing USB and MX4SIO devices with exfat filesystem"> EXFAT</label>
+    <label><input type="checkbox" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing USB and MX4SIO devices with exfat filesystem"> EXFAT</label> <br>
     
-    <label><input type="checkbox" name="no_network" data-toggle="tooltip" data-placement="top" title="Network features disabled to reduce space"> No Network</label>
+    <label><input type="checkbox" name="no_network" data-toggle="tooltip" data-placement="top" title="Network features disabled to reduce space"> No Network</label> <br>
     
-    <label><input type="checkbox" name="ds34"  data-toggle="tooltip" data-placement="top" title="Support for detecting PS3 and PS4 controllers"> DS34</label>
+    <label><input type="checkbox" name="ds34"  data-toggle="tooltip" data-placement="top" title="Support for detecting PS3 and PS4 controllers"> DS34</label> <br>
     
-    <label><input type="checkbox" name="mx4sio" data-toggle="tooltip" data-placement="top" title="Support for browsing MX4SIO devices"> MX4SIO</label>
+    <label><input type="checkbox" name="mx4sio" data-toggle="tooltip" data-placement="top" title="Support for browsing MX4SIO devices"> MX4SIO</label> <br>
     
-    <label><input type="checkbox" name="xfrom" data-toggle="tooltip" data-placement="top" title="Support for browsing PSX internal flash memory"> XFROM</label>
+    <label><input type="checkbox" name="xfrom" data-toggle="tooltip" data-placement="top" title="Support for browsing PSX internal flash memory"> XFROM</label> <br>
     
   </div>
   <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return true;">Download</a>
