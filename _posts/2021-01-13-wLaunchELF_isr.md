@@ -42,7 +42,7 @@ Download
     
     <label><input type="checkbox" name="mx4sio" data-toggle="tooltip" data-placement="top" title="Support for browsing MX4SIO devices"> MX4SIO</label>
     
-    <label><input type="checkbox" name="xfrom" data-toggle="tooltip" data-placement="top" title="Support for accesible PSX-DESR internal flash memory"> XFROM</label>
+    <label><input type="checkbox" name="xfrom" data-toggle="tooltip" data-placement="top" title="Support for browsing PSX internal flash memory"> XFROM</label>
     
   </div>
   <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return false;">Download</a>
