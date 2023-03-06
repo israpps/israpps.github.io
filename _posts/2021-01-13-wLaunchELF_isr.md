@@ -17,7 +17,7 @@ The mod offers the following features compared to upstream wLaunchELF:
 function update() {
   var bits = ["https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT"];
   var form = document.getElementById("form");
-  if (form.exfat.checked) bits.push("-EXFAT");
+  if (form.exfat.checked || form.mx4sio.checked) bits.push("-EXFAT");
   if (form.ds34.checked) bits.push("-DS34");
   if (form.no_network.checked) bits.push("-NO_NETWORK");
   if (form.xfrom.checked) bits.push("-XFROM");
