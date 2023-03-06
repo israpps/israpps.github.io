@@ -25,8 +25,7 @@ function update() {
   bits.push(".ELF");
   var url = bits.join("");
   form.url.value = url;
-  form.dl.href + url;
-  document.getElementById("dl").href=url; 
+  form.dl.href = url;
 }
 update();
 </script>
@@ -43,5 +42,5 @@ Download
     <label><input type="checkbox" name="xfrom"> XFROM</label>
   </div>
   <input readonly name="url">
-  <a id="dl" href="" class="btn btn-outline-primary">Download</a>
+  <a id="dl" href="https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT.ELF" class="btn btn-outline-primary">Download</a>
 </form>
