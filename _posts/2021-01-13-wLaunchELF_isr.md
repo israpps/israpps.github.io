@@ -45,5 +45,5 @@ Download
     <label><input type="checkbox" name="xfrom" data-toggle="tooltip" data-placement="top" title="Support for browsing PSX internal flash memory"> XFROM</label>
     
   </div>
-  <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return false;">Download</a>
+  <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return true;">Download</a>
 </form>
