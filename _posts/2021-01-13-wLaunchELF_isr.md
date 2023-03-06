@@ -11,7 +11,7 @@ The mod offers the following features compared to upstream wLaunchELF:
 - supports accessing mx4sio devices
 - supports detection of PS3/PS4 DualShocks
 - supports accessing the PSX-DESR internal flash (`xfrom`)
-- supports manipulating
+- supports manipulating memory card folders timestamp to fix/prepare a folder holding opentuna exploit
 
 <script>
 function update() {
