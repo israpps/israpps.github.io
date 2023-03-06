@@ -27,7 +27,7 @@ function update() {
   form.url.value = url;
   form.url2.href = url;
   form.dl.href = url;
-  document.getElementById("dl").href = url;
+  document.getElementById("dl").setAttribute("href",url);;
 }
 update();
 </script>
