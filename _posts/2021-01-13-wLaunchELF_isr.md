@@ -24,7 +24,6 @@ function update() {
   if (form.mx4sio.checked) bits.push("-MX4SIO");
   bits.push(".ELF");
   var url = bits.join("");
-  form.url.value = url;
   document.getElementById("wledl").setAttribute("href",url);
 }
 update();
@@ -35,13 +34,11 @@ Download
 
 <form id="form" method="get" onchange="update()">
   <div id="features">
-    <label><input type="checkbox" name="exfat"> EXFAT</label>
-    <label><input type="checkbox" name="no_network"> No Network</label>
-    <label><input type="checkbox" name="ds34"> DS34</label>
-    <label><input type="checkbox" name="mx4sio"> MX4SIO</label>
-    <label><input type="checkbox" name="xfrom"> XFROM</label>
+    <label><input type="checkbox" name="exfat"> EXFAT</label> </br>
+    <label><input type="checkbox" name="no_network"> No Network</label> </br>
+    <label><input type="checkbox" name="ds34"> DS34</label> </br>
+    <label><input type="checkbox" name="mx4sio"> MX4SIO</label> </br>
+    <label><input type="checkbox" name="xfrom"> XFROM</label> </br>
   </div>
-  <input readonly name="url">
-  <a id="wledl" href="#" class="btn btn-outline-primary" onclick="update();return false;">Download</a>
-  <a name="url2" href="#" onclick="update();return false;">Download 2</a>
+  <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return false;">Download</a>
 </form>
