@@ -21,13 +21,3 @@ Manage your system updates and dvdplayer updates installations in a very simple 
 [extra information](https://israpps.github.io/KELFBinder/){: .btn .btn-outline-primary }
 
 
-
-<img src=”https://github.com/israpps/KELFBinder/raw/main/img/img1.png”>
-<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img2.png”>
-<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img3.png”>
-<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img4.png”>
-<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img5.png”>
-<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img6.png”>
-<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img7.png”>
-<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img8.png”>
-
