@@ -17,14 +17,15 @@ Manage your system updates and dvdplayer updates installations in a very simple 
 <details>
   <summary> <b> Preview images </b> </summary>
 
-![IMG1](./img/img1.png)
-![IMG2](./img/img2.png)
-![IMG3](./img/img3.png)
-![IMG4](./img/img4.png)
-![IMG5](./img/img5.png)
-![IMG6](./img/img6.png)
-![IMG7](./img/img7.png)
-![IMG8](./img/img8.png)
+<img src=”https://github.com/israpps/KELFBinder/raw/main/img/img1.png”>
+<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img2.png”>
+<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img3.png”>
+<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img4.png”>
+<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img5.png”>
+<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img6.png”>
+<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img7.png”>
+<img src=”https://github.com/israpps/KELFBinder/blob/main/img/img8.png”>
+
 
 </details>
 
