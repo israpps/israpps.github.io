@@ -2,7 +2,7 @@
 title: FunTuna Fork
 subtitle: A modified version of original funtuna with major bugfixes and enhacements
 tags: [PS2]
-categories: [Projects]
+categories: [Projects, Fork]
 header_type: image
 header_img: "https://github.com/israpps/Funtuna-Fork/blob/main/logos%20&%20others/github%20logo.png?raw=true"
 ---
