@@ -15,9 +15,9 @@ unlike `fmcb`, `DNASLoad` creates a KELF that can be encrypted and decrypted by 
 
 
 <div class="card border-danger mb-3" style="max-width: 20rem;">
-   <div class="card-header">Header</div>
+   <div class="card-header">Credits</div>
    <div class="card-body">
-      <h5 class="card-title">Credits</h5>
+      <h5 class="card-title"></h5>
       <p class="card-text">Thanks to krHACKen, who shared the DNASLoad User Header to make this possible</p>
    </div>
 </div>
