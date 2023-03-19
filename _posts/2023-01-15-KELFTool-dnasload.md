@@ -6,9 +6,7 @@ categories: [Projects, Fork]
 ---
 
 This KELFTool fork adds a new encryption mode called `DNASLoad`.
-This mode creates a special KELF that functions the same way that the already existing mode `fmcb`, wich created KELF files to be binded as memory card updates.
-
-but with a very important difference:...
+This mode creates a special KELF that functions the same way that the already existing mode `fmcb`, wich created KELF files to be binded as memory card updates... but with a very important difference.
 
 unlike `fmcb`, `DNASLoad` creates a KELF that can be encrypted and decrypted by both PS2 and PSX-DESR. making this DNASLoad mode the perfect one for binding updates for [KELFBinder](./2022-12-21-KELFBinder.md)
 
