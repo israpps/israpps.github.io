@@ -2,6 +2,7 @@
 title: wLaunchELF 4.43x_isr
 subtitle: a mod of the most famous FileBrowser for the PlayStation2, with some tweaks and enhacements to provide the most complete and stable version of wLE out there
 tags: [PS2, wLaunchELF, PSX-DESR]
+header_type: splash
 header_img: "https://user-images.githubusercontent.com/57065102/226750383-e6b8d934-aa60-4825-95bd-968a898f6e9e.png"
 categories: [Projects, Fork]
 ---
