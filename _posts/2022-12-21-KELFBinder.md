@@ -1,7 +1,7 @@
 ---
 title: KELFBinder
 subtitle: DVDPlayer and System Updates Manager for SCE PlayStation2
-header_type: image
+header_type: splash
 header_img: "https://github.com/israpps/KELFBinder/raw/gh-pages/logo.png"
 categories: [Projects]
 tags: [PS2, PS2 System Update]
