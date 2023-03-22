@@ -38,7 +38,7 @@ update();
 
 <form id="form" method="get" onchange="update()">
   <div id="features">
-    <label><input type="checkbox" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing USB and MX4SIO devices with exfat filesystem"> EXFAT</label> <br>
+    <label><input type="checkbox" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing BDM devices with exfat filesystem"> EXFAT</label> <br>
     
     <label><input type="checkbox" name="no_network" data-toggle="tooltip" data-placement="top" title="Network features disabled to reduce space"> No Network</label> <br>
     
