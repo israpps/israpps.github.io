@@ -1,6 +1,7 @@
 ---
 title: HDL Batch Installer
 subtitle: A windows GUI for installing PS2 Games and managing a PS2 APA formatted Hard Drive
+header_type: splash
 header_img: "https://github.com/israpps/HDL-Batch-installer/blob/main/HDL-Batch-installer-SRC/gfx/BOOT_SPLASH.png?raw=true"
 tags: [PS2, Windows, UI]
 categories: [Projects]
