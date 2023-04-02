@@ -49,7 +49,7 @@ update();
 <!---    <label><input type="checkbox" name="xfrom" data-toggle="tooltip" data-placement="top" title="Support for browsing PSX internal flash memory"> XFROM</label> <br> --->
     
   </div>
-  <a id="wledl" href="https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT.ELF" class="btn btn-outline-success" onclick="update();return true;">Download</a>
+  <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return true;">Download</a>
 </form>
 
 [Github Repository](https://github.com/israpps/wLaunchELF_ISR){: .btn .btn-outline-primary }
