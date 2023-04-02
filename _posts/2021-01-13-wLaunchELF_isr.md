@@ -23,7 +23,6 @@ function update() {
   if (form.exfat.checked || form.mx4sio.checked) bits.push("-EXFAT");
   if (form.ds34.checked) bits.push("-DS34");
   if (form.no_network.checked) bits.push("-NO_NETWORK");
-  if (form.xfrom.checked) bits.push("-XFROM");
   if (form.mx4sio.checked) bits.push("-MX4SIO");
   bits.push(".ELF");
   var url = bits.join("");
