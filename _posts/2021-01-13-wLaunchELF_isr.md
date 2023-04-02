@@ -46,7 +46,7 @@ update();
     
     <label><input type="checkbox" name="mx4sio" data-toggle="tooltip" data-placement="top" title="Support for browsing MX4SIO devices"> MX4SIO</label> <br>
     
-    <label><input type="checkbox" name="xfrom" data-toggle="tooltip" data-placement="top" title="Support for browsing PSX internal flash memory"> XFROM</label> <br>
+<!---    <label><input type="checkbox" name="xfrom" data-toggle="tooltip" data-placement="top" title="Support for browsing PSX internal flash memory"> XFROM</label> <br> --->
     
   </div>
   <a id="wledl" href="https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT.ELF" class="btn btn-outline-success" onclick="update();return true;">Download</a>
