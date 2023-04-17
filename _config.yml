@@ -143,7 +143,7 @@ chulapa-skin:
   skin         :  twitter-lights-out # Optional predefined skins
   autothemer    :  true # Bool: Use autotheming
   vars          :    
-    primary     : "#7A00BE" #default ["#007bff"] - Bootstrap blue
+    primary     : "#ff5500" #default ["#007bff"] - Bootstrap blue
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
