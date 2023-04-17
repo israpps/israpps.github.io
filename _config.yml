@@ -130,6 +130,12 @@ footer:
     - label: "RSS"
       icon: "fa fa-rss"
       url:  "./atom.xml"
+    - label: "Donate"
+      icon: "fab fa-brands fa-paypal"
+      url:  "https://www.paypal.me/ElIsraPS2"
+    - label: "PSX-Place Profile"
+      icon: "fa-brands fa-playstation"
+      url: "https://www.psx-place.com/members/el_isra.59064/"
   copyright: # default is © <year> <name> 
   
 # C. Theme Settings
