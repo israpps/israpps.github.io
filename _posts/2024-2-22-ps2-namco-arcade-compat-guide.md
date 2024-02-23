@@ -37,6 +37,8 @@ you can build your own, or use a [prebuilt one](https://github.com/israpps/wLaun
 if your homebrew will be capable of running arcade games, make sure that your application also executes the `ACJVLOAD.IRX` module to init the display
 
 ### aditional notes
-seems like accessing the security dongle is buggy. further investigation is needed. (however, an older sdk used on the compilation of wlaunchelf khn coh lite used to work the other way around, ps2 card was not readable but dongle could be readed)
+accesing both mc0 and mc1 at the same time is imposible (unless security dongle compatibility is added to homebrew MCMAN). console has two memory card drivers:
+- `rom0:MCMAN`: this is actually the DONGLEMAN driver, reads security dongles from `mc0:/`
+- `rom0:MCMANO`: the 'O' stands for **O**riginal. this one reads PS2 cards from `mc1:/`
 
-if security dongle access is fixed and your application can modify its contents, please add warnings or checks to avoid accidental tampering of the security dongle boot file (`mc0:/boot.bin`)
+if you want security dongle access and your application can modify its contents, please add warnings or checks to avoid accidental tampering of the security dongle boot file (`mc0:/boot.bin`)
