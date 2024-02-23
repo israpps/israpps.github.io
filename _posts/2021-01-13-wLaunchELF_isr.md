@@ -53,3 +53,6 @@ update();
 
 [Github Repository](https://github.com/israpps/wLaunchELF_ISR){: .btn .btn-outline-primary }
 [PSX Place thread](https://www.psx-place.com/resources/wlaunchelf-4-43x_isr.1112/){: .btn .btn-outline-primary }
+
+
+[wLaunchELF isr for namco arcades](https://github.com/israpps/wLaunchELF_ISR/releases/tag/sys2x6_latest){: .btn .btn-outline-danger }
