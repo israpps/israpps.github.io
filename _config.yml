@@ -1,13 +1,10 @@
-
-title               : portfolYOU
-description         : >-
-                      I turn coffee :coffee: into code,
-                      use tabs over spaces
-                      and never broke production.
-baseurl             : ""
-repository          : israpps/israpps.github.io
-remote_theme        : yousinix/portfolYOU
-open_new_tab        : false
+### Site Settings ###
+remote_theme: "yousinix/portfolYOU"
+title: "El_Isra's website"
+description: "Just a guy trying to become a Software Developer"
+baseurl: ""
+repository: "israpps/israpps.github.io"
+open_new_tab: false
 
 plugins:
   - jemoji
@@ -19,17 +16,18 @@ nav_exclude:
   - documentation/partials/**
 
 author:
-  name      : Matias Israelson
-  image     : https://github.com/israpps.png
-  email     : israelson-matias@hotmail.com
-  facebook  : Matias Israelson
-  github    : israpps
+  name: Matias Israelson
+  image: https://github.com/israpps.png
+  email: israelson-matias@hotmail.com
+  facebook: Matias Israelson
+  github: israpps
 # instagram : your_username
-  linkedin  : your_username
-  medium    : your_username
- twitch     : el_isra___
-  twitter   : your_username
- youtube    : El_IsraPS2
+  linkedin: your_username
+  medium: your_username
+  twitch: el_isra___
+  twitter: your_username
+  youtube: El_IsraPS2
+  paypal: ElisraPS2
 
 
 ### Posts ###
