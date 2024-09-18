@@ -5,7 +5,10 @@ image: https://user-images.githubusercontent.com/57065102/226750383-e6b8d934-aa6
 description: a mod of the most famous FileBrowser for the PlayStation 2, with some tweaks and enhacements to provide the most complete and stable version of wLE out there
 ---
 
-<div id="features">
+This was one of my first projects. it began 13/1/2021 and continues untill today
+
+<form id="form" method="get" onchange="update()">
+  <div id="features">
     <label><input type="checkbox" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing BDM devices with exfat filesystem"> EXFAT</label> <br>
     <label><input type="checkbox" name="no_network" data-toggle="tooltip" data-placement="top" title="Network features disabled to reduce space"> No Network</label> <br>
     <label><input type="checkbox" name="ds34"  data-toggle="tooltip" data-placement="top" title="Support for detecting PS3 and PS4 controllers"> DS34</label> <br>
@@ -15,6 +18,7 @@ description: a mod of the most famous FileBrowser for the PlayStation 2, with so
     
   </div>
   <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return true;">Download</a>
+
 </form>
 
 [Github Repository](https://github.com/israpps/wLaunchELF_ISR){: .btn .btn-outline-primary }
