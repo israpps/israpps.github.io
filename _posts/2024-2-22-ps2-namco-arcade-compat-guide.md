@@ -13,8 +13,8 @@ color: primary
 COH-H models are plagued with this issue because their builtin software is based on a newer SDK (3.1.0) than the one used to make builtin software of retail PS2s
 
 ### SIO2 related Drivers:
-Unlike retail PS2s. the COH-H models dont have OSD versions of the stock drivers because there is no OSD (so drivers like `rom0:XMCMAN` dont exist)
-please note the following
+Unlike retail PS2s. the COH-H models dont have OSD versions of the stock drivers because there is no OSD (so drivers like `rom0:XMCMAN` dont exist)  
+please note the following:  
 the arcade modules `rom0:MCSERV` and `rom0:PADMAN` both use the OSD RPC. so their RPC service is equivalent to the `rom0:XMCMAN` and `rom0:XPADMAN` from retail PS2.  
 
 If you use those modules make sure to bind the MCSERV RPC like this:
