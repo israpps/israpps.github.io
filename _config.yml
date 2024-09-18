@@ -4,7 +4,7 @@ title: "El_Isra's website"
 description: "Just a guy trying to become a Software Developer"
 baseurl: ""
 repository: "israpps/israpps.github.io"
-open_new_tab: false
+open_new_tab: true
 
 plugins:
   - jemoji

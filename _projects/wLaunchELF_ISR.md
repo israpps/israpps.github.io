@@ -5,7 +5,27 @@ image: https://user-images.githubusercontent.com/57065102/226750383-e6b8d934-aa6
 description: a mod of the most famous FileBrowser for the PlayStation 2, with some tweaks and enhacements to provide the most complete and stable version of wLE out there
 ---
 
+
+# wLaunchELF v4.43x_isr
+
+> a mod of the most famous FileBrowser for the PlayStation 2, with some tweaks and enhacements to provide the most complete and stable version of wLE out there
+
 This was one of my first projects. it began 13/1/2021 and continues untill today
+
+<script>
+function update() {
+  var bits = ["https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT"];
+  var form = document.getElementById("form");
+  if (form.exfat.checked || form.mx4sio.checked) bits.push("-EXFAT");
+  if (form.ds34.checked) bits.push("-DS34");
+  if (form.no_network.checked) bits.push("-NO_NETWORK");
+  if (form.mx4sio.checked) bits.push("-MX4SIO");
+  bits.push(".ELF");
+  var url = bits.join("");
+  document.getElementById("wledl").setAttribute("href",url);
+}
+update();
+</script>
 
 <form id="form" method="get" onchange="update()">
   <div id="features">
