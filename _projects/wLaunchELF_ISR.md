@@ -12,6 +12,16 @@ description: a mod of the most famous FileBrowser for the PlayStation 2, with so
 
 This was one of my first projects. it began 13/1/2021 and continues untill today
 
+The mod offers the following features compared to upstream wLaunchELF:
+
+- smaller
+- more stable
+- supports accessing mx4sio devices
+- supports detection of PS3/PS4 DualShocks
+- supports manipulating memory card folders timestamp to fix/prepare a folder holding opentuna exploit
+- informs the real internal HDD status
+- special build for namco system 246/256
+
 <script>
 function update() {
   var bits = ["https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT"];
