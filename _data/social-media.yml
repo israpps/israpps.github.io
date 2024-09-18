@@ -95,3 +95,8 @@ keybase:
   url   : https://www.keybase.io/
   icon  : fab fa-keybase
   color : 66ccff
+
+paypal:
+  url: https://www.paypal.com/paypalme/
+  icon: fab fa-paypal
+  color: 003087
