@@ -1,10 +1,13 @@
 ---
 title: PS2 Namco arcade compatibility guide
 description: A writeup on how to make PS2 applications compatible with PS2 COH-H models
+image: "/assets/pics/COH.jpg"
 tags: [PS2, documentation, Namco Arcades]
 style: border
 color: primary
 ---
+
+<img src="/assets/pics/COH.jpg" width="1000" height="500"/>
 
 > first of all, thanks to krHACKen for explaining several things to me.
 
