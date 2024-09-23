@@ -1,7 +1,6 @@
 ---
 name: PS2 Pnach Converter
 tools: [PC]
-image:
 description: A GUI for converting PCSX2 pnach cheats to raw cheats
 ---
 
