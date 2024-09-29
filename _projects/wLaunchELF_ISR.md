@@ -37,6 +37,10 @@ function update() {
 update();
 </script>
 
+## Download
+
+> tick the desired features before clicking the download button
+
 <form id="form" method="get" onchange="update()">
   <div id="features">
     <label><input type="checkbox" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing BDM devices with exfat filesystem"> EXFAT</label> <br>
