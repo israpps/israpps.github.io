@@ -81,3 +81,29 @@ console has two memory card drivers:
 the only solution to this is to use the DONGLEMAN driver from Bloody Roar 3 or use a homebrew clone of DONGLEMAN
 
 > if you want security dongle access and your application can modify its contents, please add warnings or checks to avoid accidental tampering of the security dongle boot file (`mc0:/boot.bin`). if that file is gone the security dongle will no longer boot
+
+## Arcade Watchdog
+
+The Arcade SYSCON chip has an additional mechanism on it's software wich we know as "the watchdog".  
+This system is basically a 5 min. countdown to shutdown the system.  
+This countdown is reset when the mechacon successfully finishes the memory card authentication routine on a `COH-H10020` security dongle.  
+However, this check is not done all the time. A special IRX module must be executed for this (`rom0:DAEMON`).  
+But before running to make your app run this module keep in mind the following:
+- `mc0:/` access will be unstable (at least with on board DONGLEMAN)
+
+the DONGLEMAN module from Bloody Roar 3 not only auths both arcade and retail memory cards. it seems to have an additional semaphore wrapped around the functions involved on the auth reset (most likely to avoid corruption or somethin. yet this needs confirmation) (for the people interested on reversing: search the string `sema hakama` to find the creation of that semaphore).
+
+Once I get my hands on my own COH-H model I'll update the information about this with my findings. however, in the meantime:
+- if your app needs to run for more than 5 mins and you need access to `mc0:/` youre screwed
+- if your app does **NOT** care for `mc0:/` access run the following models in order and forget of this issue: `rom0:SIO2MAN`, `rom0:MCMAN`, `rom0:DAEMON`
+
+`rom0:DAEMON` setups a thread that calls the internal mcman function `McDetectCard2(0,0)` once every 60secs. wich effectively makes the system go through the dongle auth process, satisfying the arcade watchdog
+
+## Arcade Mecacon
+The arcade mechacon is quite unique on certain features. being the most interesting one that it uses different magicgate keys to update memory cards depending on the port. it uses arcade keys on `mc0:` and retail keys on `mc1:`. unlike retail mechacon wich only uses retail cards or developer mechacon wich uses both retail and developer cards on both ports
+
+Another bit of information: although the arcade **SECRMAN** is based on the `secrman_special` from utility discs, wich has the memory card update routine included. it seems like the mechacon CMDs involved on binding updates to cards are stubbed. making update binding only possible via CECHMZ1 (PS3 memory card to usb adapter) or the modified devkits that sony sold to namco back then (wich we've never seen on the homebrew scene)
+
+
+# Final notes
+> this article will be filled as time passes. most of this information was either learnt from other devs or discovered via trial and error. all of this without access to arcade hardware (wich will change soon). if any bit of information in here is wrong or incomplete let me know on discord/psx-place!
