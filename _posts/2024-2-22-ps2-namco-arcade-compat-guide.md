@@ -81,7 +81,7 @@ console has two memory card drivers:
 the only solution to this is to use the DONGLEMAN driver from Bloody Roar 3 or use a homebrew clone of DONGLEMAN
 
 
-<div class="alert alert-info" role="alert">
+<div class="alert alert-warning" role="alert">
 
   if you want security dongle access and your application can modify its contents, please add warnings or checks to avoid accidental tampering of the security dongle boot file (`mc0:/boot.bin`). if that file is gone the security dongle will no longer boot
 
