@@ -7,7 +7,7 @@ style: border
 color: primary
 ---
 
-<img src="/assets/pics/COH.jpg" width="1000" height="500"/>
+<img src="/assets/pics/COH.jpg" width="1000" height="500" data-toggle="tooltip" data-placement="bottom" title="Namco System 246 Rack C"/>
 
 > first of all, thanks to krHACKen for explaining several things to me.
 
@@ -36,8 +36,8 @@ SifLoadStartModule("rom0:CDVDFSV", 0, NULL, NULL);
 
 ### File I/O Services
 the COH-H models builtin **FILEIO** module is not compatible with our homebrew RPCs.  
-therefore, we must replace it. and for that, the IOP must be rebooted using an IOPRP image containing both homebrew **IOMAN** and **FILEIO**.  
-for simplicity and to avoid surprices I not only replace the **FILEIO** RPC service. I also replace the **IOMAN** module  
+therefore, we must replace it. and for that, the IOP must be rebooted using an IOPRP image containing homebrew **FILEIO**.  
+for simplicity and to avoid surprises I decided to not only replace the **FILEIO** RPC service. I also replace the **IOMAN** module.   
 you can build your own, or use a [prebuilt ioprp image](https://github.com/israpps/wLaunchELF_ISR/blob/system-2x6-support/iop/__precompiled/IOPRP_FILEIO.IMG)
 
 > this is how a normal IOP Reboot looks like
@@ -80,27 +80,31 @@ console has two memory card drivers:
 - `rom0:MCMANO`: the 'O' stands for **O**riginal. this one reads PS2 cards from `mc1:/`
 the only solution to this is to use the DONGLEMAN driver from Bloody Roar 3 or use a homebrew clone of DONGLEMAN
 
-> if you want security dongle access and your application can modify its contents, please add warnings or checks to avoid accidental tampering of the security dongle boot file (`mc0:/boot.bin`). if that file is gone the security dongle will no longer boot
+
+<div class="alert alert-info" role="alert">
+
+  if you want security dongle access and your application can modify its contents, please add warnings or checks to avoid accidental tampering of the security dongle boot file (`mc0:/boot.bin`). if that file is gone the security dongle will no longer boot
+
+</div>
 
 ## Arcade Watchdog
-
 The Arcade SYSCON chip has an additional mechanism on it's software wich we know as "the watchdog".  
-This system is basically a 5 min. countdown to shutdown the system.  
-This countdown is reset when the mechacon successfully finishes the memory card authentication routine on a `COH-H10020` security dongle.  
+This system is basically a 5 min. countdown to shutdown the machine.  
+This countdown is reset when the mechacon successfully finishes the memory card authentication routine on a `COH-H10020` security dongle (wich mechacon CMD fires this reset will be confirmed soon).  
 However, this check is not done all the time. A special IRX module must be executed for this (`rom0:DAEMON`).  
 But before running to make your app run this module keep in mind the following:
-- `mc0:/` access will be unstable (at least with on board DONGLEMAN)
+- `mc0:/` access will be unstable (at least with on-board DONGLEMAN)
 
 the DONGLEMAN module from Bloody Roar 3 not only auths both arcade and retail memory cards. it seems to have an additional semaphore wrapped around the functions involved on the auth reset (most likely to avoid corruption or somethin. yet this needs confirmation) (for the people interested on reversing: search the string `sema hakama` to find the creation of that semaphore).
 
 Once I get my hands on my own COH-H model I'll update the information about this with my findings. however, in the meantime:
 - if your app needs to run for more than 5 mins and you need access to `mc0:/` youre screwed
-- if your app does **NOT** care for `mc0:/` access run the following models in order and forget of this issue: `rom0:SIO2MAN`, `rom0:MCMAN`, `rom0:DAEMON`
+- if your app does **NOT** care for `mc0:/` access run the following modules in order and forget of this issue: `rom0:SIO2MAN`, `rom0:MCMAN`, `rom0:DAEMON`
 
-`rom0:DAEMON` setups a thread that calls the internal mcman function `McDetectCard2(0,0)` once every 60secs. wich effectively makes the system go through the dongle auth process, satisfying the arcade watchdog
+> `rom0:DAEMON` setups a thread that calls the internal mcman function `McDetectCard2(0,0)` once every 60secs. wich effectively makes the system go through the dongle auth process, satisfying the arcade watchdog.
 
-## Arcade Mecacon
-The arcade mechacon is quite unique on certain features. being the most interesting one that it uses different magicgate keys to update memory cards depending on the port. it uses arcade keys on `mc0:` and retail keys on `mc1:`. unlike retail mechacon wich only uses retail cards or developer mechacon wich uses both retail and developer cards on both ports
+## Arcade Mechacon
+The arcade mechacon is quite unique on certain features. being the most interesting one that it uses different magicgate keys to auth memory cards depending on the port. it uses arcade keys on `mc0:` and retail keys on `mc1:`. unlike retail mechacon wich only uses retail keys or developer mechacon wich uses both retail and developer keys on both ports
 
 Another bit of information: although the arcade **SECRMAN** is based on the `secrman_special` from utility discs, wich has the memory card update routine included. it seems like the mechacon CMDs involved on binding updates to cards are stubbed. making update binding only possible via CECHMZ1 (PS3 memory card to usb adapter) or the modified devkits that sony sold to namco back then (wich we've never seen on the homebrew scene)
 
