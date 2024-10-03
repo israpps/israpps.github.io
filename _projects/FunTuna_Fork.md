@@ -4,6 +4,8 @@ tools: [PS2]
 image:
 description: A modified version of original funtuna with major bugfixes and enhacements
 image: https://github.com/israpps/Funtuna-Fork/blob/main/logos%20&%20others/github%20logo.png?raw=true
+style: border
+color: success
 ---
 
 # FunTuna Fork

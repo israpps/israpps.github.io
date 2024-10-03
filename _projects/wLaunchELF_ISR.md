@@ -3,6 +3,8 @@ name: wLaunchELF 4.43x_isr
 tools: [ps2, fork]
 image: https://user-images.githubusercontent.com/57065102/226750383-e6b8d934-aa60-4825-95bd-968a898f6e9e.png
 description: a mod of the most famous FileBrowser for the PlayStation 2, with some tweaks and enhacements to provide the most complete and stable version of wLE out there
+style: border
+color: info
 ---
 
 

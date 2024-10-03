@@ -3,6 +3,8 @@ name: "PlayStation 2 Basic Bootloader"
 description: "a simple and minimalist bootloader capable of properly initializing the console system and running homebrew applications"
 image: "https://israpps.github.io/PlayStation2-Basic-BootLoader/logo.png"
 tools: [PS2]
+style: border
+color: primary
 ---
 
 # PlayStation 2 Basic Bootloader
