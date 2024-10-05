@@ -8,7 +8,7 @@ color: primary
 ---
 
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Console_psx.jpg" width="1000" height="500"/>
+<img class="wow animated fadeIn" data-wow-delay=".15s" src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Console_psx.jpg" width="1000" height="500"/>
 
 The PSX DESR is a fusion between a PS2 based upon the `SCPH-50xxx` series and a DVR
 
