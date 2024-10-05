@@ -45,21 +45,22 @@ update();
 
 <form id="form" method="get" onchange="update()">
   <div id="features">
-    <label><input type="checkbox" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing BDM devices with exfat filesystem"> EXFAT</label> <br>
-    <label><input type="checkbox" name="no_network" data-toggle="tooltip" data-placement="top" title="Network features disabled to reduce space"> No Network</label> <br>
-    <label><input type="checkbox" name="ds34"  data-toggle="tooltip" data-placement="top" title="Support for detecting PS3 and PS4 controllers"> DS34</label> <br>
-    <label><input type="checkbox" name="mx4sio" data-toggle="tooltip" data-placement="top" title="Support for browsing MX4SIO devices"> MX4SIO</label> <br>
-    
-<!---    <label><input type="checkbox" name="xfrom" data-toggle="tooltip" data-placement="top" title="Support for browsing PSX internal flash memory"> XFROM</label> <br> --->
-    
+    <label><input type="checkbox" role="switch" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing BDM devices with exfat filesystem"> EXFAT</label> <br>
+    <label><input type="checkbox" role="switch" name="no_network" data-toggle="tooltip" data-placement="top" title="Network features disabled to reduce space"> No Network</label> <br>
+    <label><input type="checkbox" role="switch" name="ds34"  data-toggle="tooltip" data-placement="top" title="Support for detecting PS3 and PS4 controllers"> DS34</label> <br>
+    <label><input type="checkbox" role="switch" name="mx4sio" data-toggle="tooltip" data-placement="top" title="Support for browsing MX4SIO devices"> MX4SIO</label> <br>
   </div>
+
   <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return true;">Download</a>
 
 </form>
 
-[Github Repository](https://github.com/israpps/wLaunchELF_ISR){: .btn .btn-outline-primary }
+<br>
+<div class="btn-group">
+  <a href="https://github.com/israpps/wLaunchELF_ISR" class="btn btn-outline-primary" aria-current="page">Github Repository</a>
+  <a href="https://www.psx-place.com/resources/wlaunchelf-4-43x_isr.1112/" class="btn btn-outline-primary">PSX Place thread</a>
+</div>
 
-[PSX Place thread](https://www.psx-place.com/resources/wlaunchelf-4-43x_isr.1112/){: .btn .btn-outline-primary }
-
+<br>
 
 [wLaunchELF isr for namco arcades](https://github.com/israpps/wLaunchELF_ISR/releases/tag/sys2x6_latest){: .btn .btn-outline-danger }
