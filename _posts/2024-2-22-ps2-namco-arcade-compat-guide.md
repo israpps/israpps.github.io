@@ -82,7 +82,8 @@ there is only one exception to this rule and it is the Soul Calibur 2 campaign c
 accesing both mc0 and mc1 at the same time is imposible with the builtin ROM modules.  
 console has two memory card drivers:
 - `rom0:MCMAN`: this is actually the DONGLEMAN driver, reads security dongles from `mc0:/`
-- `rom0:MCMANO`: the 'O' stands for **O**riginal. this one reads PS2 cards from `mc1:/`
+- `rom0:MCMANO`: the 'O' stands for **O**riginal. this one reads PS2 cards from `mc1:/`  
+
 the only solution to this is to use the DONGLEMAN driver from Bloody Roar 3 or use a homebrew clone of DONGLEMAN
 
 
