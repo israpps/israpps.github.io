@@ -12,10 +12,11 @@ color: primary
 > first of all, thanks to krHACKen for explaining several things to me.
 
 ## RPC Incompatibilities
-
+----
 COH-H models are plagued with this issue because their builtin software is based on a newer SDK (3.1.0) than the one used to make builtin software of retail PS2s
 
-### SIO2 related Drivers:
+### SIO2 related Drivers
+----
 Unlike retail PS2s. the COH-H models dont have OSD versions of the stock drivers because there is no OSD (so drivers like `rom0:XMCMAN` dont exist)  
 please note the following:  
 the arcade modules `rom0:MCSERV` and `rom0:PADMAN` both use the OSD RPC. so their RPC service is equivalent to the `rom0:XMCMAN` and `rom0:XPADMAN` from retail PS2.  
@@ -27,6 +28,7 @@ mcInit(MC_TYPE_XMC);
 and for the PADMAN module. link your application against `libpadx` not `libpad`
 
 ### CDVDMAN RPC
+----
 Unlike retail PS2. the COH-H models do not load the **CDVDMAN** RPC service on boot (`rom0:CDVDFSV`).
 therefore. any function that requires access to **CDVDMAN** will hang if you dont execute that module first.  
 as soon as you reboot the IOP you should load that module like this:
@@ -35,6 +37,7 @@ SifLoadStartModule("rom0:CDVDFSV", 0, NULL, NULL);
 ```
 
 ### File I/O Services
+----
 the COH-H models builtin **FILEIO** module is not compatible with our homebrew RPCs.  
 therefore, we must replace it. and for that, the IOP must be rebooted using an IOPRP image containing homebrew **FILEIO**.  
 for simplicity and to avoid surprises I decided to not only replace the **FILEIO** RPC service. I also replace the **IOMAN** module.   
@@ -53,6 +56,7 @@ you can build your own, or use a [prebuilt ioprp image](https://github.com/israp
 ```
 
 ## newlib port issues
+----
 On latest SDK, wich has a newlib port, you will need to add the following code somwhere:
 ```c
 #include <ps2sdkapi.h>
@@ -66,10 +70,11 @@ what this macro does is override one of the standard rtc related functions. this
 - NVRAM access seems to make the system hang sometimes. I havent found the cause. could be something else
 
 ## Game display
+----
 if your homebrew will be capable of running arcade games, make sure that your application also executes the `ACJVLOAD.IRX` module to init the display (pst: archive.org has one)
 
 ## Memory Card access
-
+----
 the COH-H models use two sets of magicgate keys. the port 1 is authenticated with the arcade magicgate keystore. therefore it only reads `COH-H10020` security dongles. while port 2 uses retail keys, wich makes it read normal `SCPH-10020` memory cards.
 
 there is only one exception to this rule and it is the Soul Calibur 2 campaign cards. these are normal memory cards that seem to have some sort of encryption both on the console software and card hardware. this results on these campaign cards corrupting if accessed by any driver beyond the DONGLEMAN driver found on the game
@@ -88,6 +93,7 @@ the only solution to this is to use the DONGLEMAN driver from Bloody Roar 3 or u
 </div>
 
 ## Arcade Watchdog
+----
 The Arcade SYSCON chip has an additional mechanism on it's software wich we know as "the watchdog".  
 This system is basically a 5 min. countdown to shutdown the machine.  
 This countdown is reset when the mechacon successfully finishes the memory card authentication routine on a `COH-H10020` security dongle (wich mechacon CMD fires this reset will be confirmed soon).  
@@ -104,10 +110,12 @@ Once I get my hands on my own COH-H model I'll update the information about this
 > `rom0:DAEMON` setups a thread that calls the internal mcman function `McDetectCard2(0,0)` once every 60secs. wich effectively makes the system go through the dongle auth process, satisfying the arcade watchdog.
 
 ## Arcade Mechacon
+----
 The arcade mechacon is quite unique on certain features. being the most interesting one that it uses different magicgate keys to auth memory cards depending on the port. it uses arcade keys on `mc0:` and retail keys on `mc1:`. unlike retail mechacon wich only uses retail keys or developer mechacon wich uses both retail and developer keys on both ports
 
 Another bit of information: although the arcade **SECRMAN** is based on the `secrman_special` from utility discs, wich has the memory card update routine included. it seems like the mechacon CMDs involved on binding updates to cards are stubbed. making update binding only possible via CECHMZ1 (PS3 memory card to usb adapter) or the modified devkits that sony sold to namco back then (wich we've never seen on the homebrew scene)
 
 
 # Final notes
+----
 > this article will be filled as time passes. most of this information was either learnt from other devs or discovered via trial and error. all of this without access to arcade hardware (wich will change soon). if any bit of information in here is wrong or incomplete let me know on discord/psx-place!
