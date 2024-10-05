@@ -7,7 +7,7 @@ style: border
 color: primary
 ---
 
-<img src="/assets/pics/COH.jpg" width="1000" height="500" data-toggle="tooltip" data-placement="bottom" title="Namco System 246 Rack C"/>
+<img src="/assets/pics/COH.jpg" class="wow animated fadeIn" data-wow-delay=".15s" width="1000" height="500" data-toggle="tooltip" data-placement="bottom" title="Namco System 246 Rack C"/>
 
 > first of all, thanks to krHACKen for explaining several things to me.
 
