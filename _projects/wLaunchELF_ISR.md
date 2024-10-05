@@ -27,7 +27,7 @@ The mod offers the following features compared to upstream wLaunchELF:
 <script>
 function update() {
   var bits = ["https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT"];
-  var form = document.getElementById("features");
+  var form = document.getElementById("form");
   if (form.exfat.checked || form.mx4sio.checked) bits.push("-EXFAT");
   if (form.ds34.checked) bits.push("-DS34");
   if (form.no_network.checked) bits.push("-NO_NETWORK");
@@ -43,43 +43,23 @@ update();
 
 > tick the desired features before clicking the download button
 
-<div id="features" class="btn-group" role="group" aria-label="Program features" onchange="update()">
-  <input type="checkbox" class="btn-check" id="exfat" autocomplete="off">
-  <label class="btn btn-outline-primary" for="exfat">EXFAT</label>
-
-  <input type="checkbox" class="btn-check" id="no_network" autocomplete="off">
-  <label class="btn btn-outline-primary" for="no_network">No network</label>
-
-  <input type="checkbox" class="btn-check" id="ds34" autocomplete="off">
-  <label class="btn btn-outline-primary" for="ds34">DS34</label>
-
-  <input type="checkbox" class="btn-check" id="mx4sio" autocomplete="off">
-  <label class="btn btn-outline-primary" for="mx4sio">MX4SIO</label>
-</div>
-
+<form id="form" method="get" onchange="update()">
+  <div id="features">
+    <label><input type="checkbox" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing BDM devices with exfat filesystem"> EXFAT</label> <br>
+    <label><input type="checkbox" name="no_network" data-toggle="tooltip" data-placement="top" title="Network features disabled to reduce space"> No Network</label> <br>
+    <label><input type="checkbox" name="ds34"  data-toggle="tooltip" data-placement="top" title="Support for detecting PS3 and PS4 controllers"> DS34</label> <br>
+    <label><input type="checkbox" name="mx4sio" data-toggle="tooltip" data-placement="top" title="Support for browsing MX4SIO devices"> MX4SIO</label> <br>
+    
 <!---    <label><input type="checkbox" name="xfrom" data-toggle="tooltip" data-placement="top" title="Support for browsing PSX internal flash memory"> XFROM</label> <br> --->
+    
+  </div>
+  <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return true;">Download</a>
 
-<a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return true;">Download</a>
-
-
+</form>
 
 [Github Repository](https://github.com/israpps/wLaunchELF_ISR){: .btn .btn-outline-primary }
 
-
 [PSX Place thread](https://www.psx-place.com/resources/wlaunchelf-4-43x_isr.1112/){: .btn .btn-outline-primary }
-
-<p class="d-inline-flex gap-1">
-  <button class="btn btn-outline-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Special Builds
-  </button>
-</p>
-
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
 
 
 [wLaunchELF isr for namco arcades](https://github.com/israpps/wLaunchELF_ISR/releases/tag/sys2x6_latest){: .btn .btn-outline-danger }
-
-  </div>
-</div>
-
