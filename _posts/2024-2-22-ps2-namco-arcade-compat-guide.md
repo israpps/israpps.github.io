@@ -76,7 +76,7 @@ this function is a weak definition found on the PS2SDK crt0, we can use it to ga
 
 ## Game display
 ----
-if your homebrew will be capable of running arcade games, make sure that your application also executes the `ACJVLOAD.IRX` module to init the display (pst: archive.org has one)
+if your homebrew will need video output, you must use `ACJVLOAD.IRX` module to init the display 
 
 ## Memory Card access
 ----
