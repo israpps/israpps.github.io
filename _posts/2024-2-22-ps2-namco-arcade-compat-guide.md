@@ -57,17 +57,22 @@ you can build your own, or use a [prebuilt ioprp image](https://github.com/israp
 
 ## newlib port issues
 ----
-On latest SDK, wich has a newlib port, you will need to add the following code somwhere:
+newlib will try to open `rom0:ROMVER` and use some of the mechacon cmds (wich require CDVDMAN), does that ring a bell? yes, we talked about these two things on the previous paragraph.
+
+As an all in one solution, if your program only reboots the IOP once, I would do the following, delete the code for IOP reboot from your main function or whatever, and instead, add this to your code:
 ```c
-#include <ps2sdkapi.h>
-LIBCGLUE_SUPPORT_NAMCO_SYSTEM_2x6();
+void _ps2sdk_memory_init() {
+    while (!SifIopRebootBuffer(ioprp, size_ioprp)) {}; //replace FILEIO
+    while (!SifIopSync()) {};
+SifLoadStartModule("rom0:CDVDFSV", 0, NULL, NULL);
+}
 ```
 (I always add it after at the end of the source file holding `main()`):
 
-what this macro does is override one of the standard rtc related functions. this is done because this code executes before `main()` where we still haven't executed the **CDVDMAN** RPC to allow comunication with the mechacon (and therefore with the console RTC)
+this function is a weak definition found on the PS2SDK crt0, we can use it to gain code execution before newlib does things that will cause issues, giving us the change to replace FILEIO and load CDVDFSV so that newlib can do it's thing without issues 
 
 ## extra tips that need more testing/information
-- NVRAM access seems to make the system hang sometimes. I havent found the cause. could be something else
+- ...
 
 ## Game display
 ----
@@ -114,8 +119,14 @@ Once I get my hands on my own COH-H model I'll update the information about this
 ----
 The arcade mechacon is quite unique on certain features. being the most interesting one that it uses different magicgate keys to auth memory cards depending on the port. it uses arcade keys on `mc0:` and retail keys on `mc1:`. unlike retail mechacon wich only uses retail keys or developer mechacon wich uses both retail and developer keys on both ports
 
-Another bit of information: although the arcade **SECRMAN** is based on the `secrman_special` from utility discs, wich has the memory card update routine included. it seems like the mechacon CMDs involved on binding updates to cards are stubbed. making update binding only possible via CECHMZ1 (PS3 memory card to usb adapter) or the modified devkits that sony sold to namco back then (wich we've never seen on the homebrew scene)
+Another bit of information: although the arcade **SECRMAN** is based on the `secrman_special` from utility discs, wich has the memory card update routine included. it seems like the mechacon CMDs involved on binding updates to cards are stubbed. making update binding only possible via CECHMZ1 (PS3 memory card to usb adapter) or the modified devkits that sony sold to namco back then (wich we've never seen on the homebrew scene). there is also wLaunchELF MECHAEMU and DONGLEBINDER, two brand new homebrews that will allow you to rebind updates to dongle from retail ps2
 
+# C++ issues
+If you chose C++ over C for your PS2 app, and you whant arcade compatibility. I have bad news for ya.
+
+For some reason, C++ applications are crashing on arcade hardware, you remember that `_ps2sdk_memory_init()` that I mentioned above, that was useful to solve the incompatibilities while keeping newlib happy? well, the program crashes before crt0 executes that, so good luck finding the issue...
+
+As of 2/01/2025 this problem has not been solved, I will continue to investigate it however.
 
 # Final notes
 ----
