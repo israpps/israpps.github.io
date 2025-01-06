@@ -32,6 +32,7 @@ function update() {
   if (form.ds34.checked) bits.push("-DS34");
   if (form.no_network.checked) bits.push("-NO_NETWORK");
   if (form.mx4sio.checked) bits.push("-MX4SIO");
+  if (form.mmce.checked) bits.push("-MMCE");
   bits.push(".ELF");
   var url = bits.join("");
   document.getElementById("wledl").setAttribute("href",url);
@@ -49,6 +50,7 @@ update();
     <label><input type="checkbox" role="switch" name="no_network" data-toggle="tooltip" data-placement="top" title="Network features disabled to reduce space"> No Network</label> <br>
     <label><input type="checkbox" role="switch" name="ds34"  data-toggle="tooltip" data-placement="top" title="Support for detecting PS3 and PS4 controllers"> DS34</label> <br>
     <label><input type="checkbox" role="switch" name="mx4sio" data-toggle="tooltip" data-placement="top" title="Support for browsing MX4SIO devices"> MX4SIO</label> <br>
+    <label><input type="checkbox" role="switch" name="mmce" data-toggle="tooltip" data-placement="top" title="Support for browsing the SDCard of SD2PSX, MemcardPro2 and similar devices"> MMCE</label> <br>
   </div>
 
   <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return true;">Download</a>
