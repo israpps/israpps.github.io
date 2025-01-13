@@ -48,9 +48,6 @@ function update() {
 update();
 </script>
 
-## Download
-
-> tick the desired features before clicking the download button
 
 <form id="form" method="get" onchange="update()">
   <div id="features" class="card border-primary">
