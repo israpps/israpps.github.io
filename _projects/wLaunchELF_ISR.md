@@ -53,15 +53,20 @@ update();
 > tick the desired features before clicking the download button
 
 <form id="form" method="get" onchange="update()">
-  <div id="features">
+  <div id="features" class="card border-primary">
+  <h5 class="card-header text-primary">Download</h5>
+  <div class="card-body">
+    <p class="card-text">Choose the desired features before downloading</p> <br>
     <label><input type="checkbox" role="switch" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing BDM devices with exfat filesystem"> EXFAT</label> <br>
     <label><input type="checkbox" role="switch" name="no_network" data-toggle="tooltip" data-placement="top" title="Network features disabled to reduce space"> No Network</label> <br>
     <label><input type="checkbox" role="switch" name="ds34"  data-toggle="tooltip" data-placement="top" title="Support for detecting PS3 and PS4 controllers"> DS34</label> <br>
     <label><input type="checkbox" role="switch" name="mx4sio" data-toggle="tooltip" data-placement="top" title="Support for browsing MX4SIO devices" onclick="switchmmc(0)"> MX4SIO</label> <br>
-    <label><input type="checkbox" role="switch" name="mmce" data-toggle="tooltip" data-placement="top" title="Support for browsing the SDCard of SD2PSX, MemcardPro2 and similar devices" onclick="switchmmc(1)"> MMCE</label> <br>
+    <label><input type="checkbox" role="switch" name="mmce" data-toggle="tooltip" data-placement="top" title="Support for browsing the SDCard of SD2PSX, MemcardPro2 and similar devices" onclick="switchmmc(1)"> MMCE</label> <br><br>
+    <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return true;">Download</a>
+  </div>
   </div>
 
-  <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return true;">Download</a>
+  
 
 </form>
 
