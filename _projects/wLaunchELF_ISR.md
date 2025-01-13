@@ -51,7 +51,7 @@ update();
 
 <form id="form" method="get" onchange="update()">
   <div id="features" class="card border-primary">
-  <h5 class="card-header text-primary">Download</h5>
+  <h5 class="card-header text-primary border-primary">Download</h5>
   <div class="card-body border-primary">
     <p class="card-text">Choose the desired features before downloading</p> <br>
     <label><input type="checkbox" role="switch" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing BDM devices with exfat filesystem"> EXFAT</label> <br>
