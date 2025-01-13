@@ -22,9 +22,17 @@ The mod offers the following features compared to upstream wLaunchELF:
 - supports detection of PS3/PS4 DualShocks
 - supports manipulating memory card folders timestamp to fix/prepare a folder holding opentuna exploit
 - informs the real internal HDD status
-- special build for namco system 246/256
+- special builds for arcade PS2 (namco system 246/256, Konami python1)
 
 <script>
+function switchmmc(mode) {
+  var form = document.getElementById("form");
+  if (mode == 0) {
+    form.mmce.checked = false;
+  } else {
+    form.mx4sio.checked = false;
+  }
+}
 function update() {
   var bits = ["https://github.com/israpps/wLaunchELF_ISR/releases/download/latest/BOOT"];
   var form = document.getElementById("form");
@@ -32,6 +40,7 @@ function update() {
   if (form.ds34.checked) bits.push("-DS34");
   if (form.no_network.checked) bits.push("-NO_NETWORK");
   if (form.mx4sio.checked) bits.push("-MX4SIO");
+  if (form.mmce.checked) bits.push("-MMCE");
   bits.push(".ELF");
   var url = bits.join("");
   document.getElementById("wledl").setAttribute("href",url);
@@ -48,7 +57,8 @@ update();
     <label><input type="checkbox" role="switch" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing BDM devices with exfat filesystem"> EXFAT</label> <br>
     <label><input type="checkbox" role="switch" name="no_network" data-toggle="tooltip" data-placement="top" title="Network features disabled to reduce space"> No Network</label> <br>
     <label><input type="checkbox" role="switch" name="ds34"  data-toggle="tooltip" data-placement="top" title="Support for detecting PS3 and PS4 controllers"> DS34</label> <br>
-    <label><input type="checkbox" role="switch" name="mx4sio" data-toggle="tooltip" data-placement="top" title="Support for browsing MX4SIO devices"> MX4SIO</label> <br>
+    <label><input type="checkbox" role="switch" name="mx4sio" data-toggle="tooltip" data-placement="top" title="Support for browsing MX4SIO devices" onclick="switchmmc(0)"> MX4SIO</label> <br>
+    <label><input type="checkbox" role="switch" name="mmce" data-toggle="tooltip" data-placement="top" title="Support for browsing the SDCard of SD2PSX, MemcardPro2 and similar devices" onclick="switchmmc(1)"> MMCE</label> <br>
   </div>
 
   <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return true;">Download</a>
