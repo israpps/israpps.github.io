@@ -25,6 +25,10 @@ The mod offers the following features compared to upstream wLaunchELF:
 - special builds for arcade PS2 (namco system 246/256, Konami python1)
 
 <script>
+function exfatdep() {
+  var form = document.getElementById("form");
+  if (form.mx4sio.checked) form.exfat.checked = true
+}
 function switchmmc(mode) {
   var form = document.getElementById("form");
   if (mode == 0) {
@@ -54,12 +58,37 @@ update();
   <h5 class="card-header text-primary border-primary">Download</h5>
   <div class="card-body border-primary">
     <p class="card-text">Choose the desired features before downloading</p> <br>
-    <label><input type="checkbox" role="switch" name="exfat"  data-toggle="tooltip" data-placement="top" title="Support accesing BDM devices with exfat filesystem"> EXFAT</label> <br>
-    <label><input type="checkbox" role="switch" name="no_network" data-toggle="tooltip" data-placement="top" title="Network features disabled to reduce space"> No Network</label> <br>
-    <label><input type="checkbox" role="switch" name="ds34"  data-toggle="tooltip" data-placement="top" title="Support for detecting PS3 and PS4 controllers"> DS34</label> <br>
-    <label><input type="checkbox" role="switch" name="mx4sio" data-toggle="tooltip" data-placement="top" title="Support for browsing MX4SIO devices" onclick="switchmmc(0)"> MX4SIO</label> <br>
-    <label><input type="checkbox" role="switch" name="mmce" data-toggle="tooltip" data-placement="top" title="Support for browsing the SDCard of SD2PSX, MemcardPro2 and similar devices" onclick="switchmmc(1)"> MMCE</label> <br><br>
-    <a id="wledl" href="#" class="btn btn-outline-success" onclick="update();return true;">Download</a>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <label><input type="checkbox" role="switch" name="exfat" data-toggle="tooltip" data-placement="top" title="Support accesing BDM devices with exfat filesystem"> EXFAT</label>
+    </div>
+    <div class="col-sm">
+      <label><input type="checkbox" role="switch" name="no_network" data-toggle="tooltip" data-placement="top" title="Network features disabled to reduce space"> No Network</label>
+    </div>
+    <div class="col-sm">
+      <label><input type="checkbox" role="switch" name="ds34"  data-toggle="tooltip" data-placement="top" title="Support for detecting PS3 and PS4 controllers"> DS34</label>
+    </div>
+  </div>
+</div>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+      <label><input type="checkbox" role="switch" name="mx4sio" data-toggle="tooltip" data-placement="left" title="Support for browsing MX4SIO devices" onclick="switchmmc(0); exfatdep();"> MX4SIO</label>
+    </div>
+    <div class="col-sm">
+      <label><input type="checkbox" role="switch" name="mmce" data-toggle="tooltip" data-placement="left" title="Support for browsing the SDCard of SD2PSX, MemcardPro2 and similar devices" onclick="switchmmc(1)"> MMCE</label> 
+    </div>
+    <div class="col-sm">
+      SOON
+      <!--<label><input type="checkbox" role="switch" name="dvrp" data-toggle="tooltip" data-placement="left" title="Support for browsing the Encrypted DVR Area of a PSX DESR HardDrive"> DVR</label> -->
+    </div>
+  </div>
+</div>
+    <br><br><br>
+    <a id="wledl" href="#" class="btn btn-outline-primary btn-block progress-bar-striped progress-bar-animated" onclick="update();return true;">Download</a>
   </div>
   </div>
 
