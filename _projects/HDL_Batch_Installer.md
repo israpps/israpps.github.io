@@ -20,7 +20,6 @@ since a long time. the PS2 homebrew community needed a good tool to manage PS2 I
 
 ## Currently Implemented features:
 
-
 - [x] Install multiple Games at once
 - [x] Extract multiple Games at once
 - [x] Automatically assign the original Game Title before Installation
