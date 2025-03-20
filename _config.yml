@@ -1,0 +1,92 @@
+### Site Settings ###
+remote_theme: "yousinix/portfolYOU"
+title: "El_Isra's website"
+description: "Just a guy trying to become a Software Developer"
+baseurl: ""
+repository: "israpps/israpps.github.io"
+open_new_tab: true
+
+plugins:
+  - jemoji
+
+nav_exclude:
+  - pages/tags.html
+  - pages/404.html
+  - pages/index.md
+  - documentation/partials/**
+
+author:
+  name: Matias Israelson
+  image: https://github.com/israpps.png
+  email: israelson-matias@hotmail.com
+  facebook: Matias Israelson
+  github: israpps
+# instagram : your_username
+#  linkedin: your_username
+#  medium: your_username
+  twitch: el_isra___
+  twitter: El_Isra_a
+  youtube: El_IsraPS2
+  paypal: ElisraPS2
+
+
+### Posts ###
+permalink: /blog/:title
+
+
+### Collections ###
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name
+  elements:
+    output: true
+
+
+
+disqus:
+  shortname: ElIsraWebsite
+
+
+### Analytics ###
+analytics:
+  enabled: false
+  google:
+    tracking_id: your-google-tracking-id
+
+
+### Buy me a coffee ###
+# See https://www.buymeacoffee.com/
+#buymeacoffee:
+#  enabled: false
+#  username: your_username
+#  color: "#007bff"
+#  message: "Thank you for visiting."                    # Message to be displayed aside from the button for a few seconds.
+#  description: "Support me on Buy me a coffee!"
+
+
+### Defaults for collections ###
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "elements"
+    values:
+      layout: "element"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      comments: false                                   # Set to true to enable disqus comments
+
+
+
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
+  - "*.log"
