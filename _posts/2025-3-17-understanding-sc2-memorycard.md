@@ -7,7 +7,14 @@ style: border
 color: danger
 ---
 
-<img class="wow animated fadeIn" data-wow-delay=".15s" src="/assets/pics/conquest_card_front.jpg" width="500" height="500"/><img class="wow animated fadeIn" data-wow-delay=".15s" src="/assets/pics/conquest_card_back.jpg" width="500" height="500"/>
+<div id="banner" style="overflow: hidden; align-items: center; float: left;">
+    <div class="" style="max-width: 40%; max-height: 40%; display: inline-block;">
+        <img src ="/assets/pics/conquest_card_front.jpg">
+    </div>
+    <div class="" style="max-width: 40%; max-height: 40%; display: inline-block;">
+        <img src ="/assets/pics/conquest_card_back.jpg">
+    </div>
+</div>
 
 ## History
 
