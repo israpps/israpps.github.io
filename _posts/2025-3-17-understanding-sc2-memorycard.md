@@ -9,10 +9,10 @@ color: danger
 
 <div id="banner" style="overflow: hidden; align-items: center; float: left;">
     <div class="" style="max-width: 40%; max-height: 40%; display: inline-block;">
-        <img src ="/assets/pics/conquest_card_front.jpg">
+        <img src ="/assets/pics/conquest_card_front.jpg" class="wow animated fadeIn">
     </div>
     <div class="" style="max-width: 40%; max-height: 40%; display: inline-block;">
-        <img src ="/assets/pics/conquest_card_back.jpg">
+        <img src ="/assets/pics/conquest_card_back.jpg" class="wow animated fadeIn">
     </div>
 </div>
 
@@ -31,6 +31,7 @@ SoulCalibur II recycles these cards using a custom filesystem (or raw data?) enc
 The DONGLEMAN module that SoulCalibur II uses to handle this card does not seem to be a special version. since more than 70 dongles have a DONGLEMAN module with the same hash (`0a6ca23ae87aba1d0a12641435f84327`) (for example: Bloody Roar 3)
 
 ## Magic String
+
 This card uses a different magic string
 
 ```Memory Card for SoulCaliburII (C)1995 1998 2002 NAMCO LTD.```
@@ -38,6 +39,7 @@ This card uses a different magic string
 ## Related files
 
 Based on talks with ExtraWeb1. it seems like the following files inside the SoulCalibur II Dongle are directly related to the conquest card
+
 ```
 mc0:PSAC04A
 mc0:PSAC05
