@@ -97,6 +97,16 @@ keybase:
   color : 66ccff
 
 paypal:
-  url: https://www.paypal.com/paypalme/
-  icon: fab fa-paypal
+  url  : https://www.paypal.com/paypalme/
+  icon : fab fa-paypal
   color: 003087
+
+psxplace:
+  url  : https://www.psx-place.com/
+  icon : fab fa-playstation
+  color: 003087
+
+discordserver:
+  url  : https://tinyurl.com/
+  icon : fab fa-discord
+  color: 5865F2
