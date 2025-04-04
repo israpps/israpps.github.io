@@ -1,0 +1,6 @@
+- title: DONGLEMAN is not unique
+  date: 13/2/2025
+  description: After doing some checks, I realized dongleman module used by SC2 is not unique, actually, scanning a package of several dongle Dumps yielded more than 60 matches with the same hash arised (<code>0a6ca23ae87aba1d0a12641435f84327</code>)
+
+
+  

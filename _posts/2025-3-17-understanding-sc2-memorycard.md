@@ -26,10 +26,6 @@ The memory cards used come from the recall campaign sony did during PS2 launch o
 
 SoulCalibur II recycles these cards using a custom filesystem (or raw data?) encrypted page-by-page. as well as custom ECC format (it seems)
 
-## The Software
-
-The DONGLEMAN module that SoulCalibur II uses to handle this card does not seem to be a special version. since more than 70 dongles have a DONGLEMAN module with the same hash (`0a6ca23ae87aba1d0a12641435f84327`) (for example: Bloody Roar 3)
-
 ## Magic String
 
 This card uses a different magic string
@@ -45,6 +41,20 @@ mc0:PSAC04A
 mc0:PSAC05
 ```
 
-## Next steps
+## Timeline
 
-I will soon get one. when I have it. will try to modify the SoulCalibur II dongle contents to get logs and information from the card, everything logged into the ACUART (builtin RS232 on the System246)
+Events related to new discoveries about the card will be placed here, to keep a chronological order
+
+<div class="col mt-4">
+  <div class="timeline-body bg-themed">
+    {% for item in site.data.conquesttimeline %}
+      <div class="timeline-item">
+        <div class="content">
+          <h2>{{ item.title }}</h2>
+          <h6 class="date">{{ item.date }}</h6>
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
