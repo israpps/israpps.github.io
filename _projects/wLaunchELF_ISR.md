@@ -104,4 +104,4 @@ update();
 
 <br>
 
-[wLaunchELF isr for namco arcades](https://github.com/israpps/wLaunchELF_ISR/releases/tag/sys2x6_latest){: .btn .btn-outline-danger }
+[wLaunchELF isr for Arcade PS2](https://github.com/israpps/wLaunchELF_ISR/releases/tag/arcade){: .btn .btn-outline-danger }
