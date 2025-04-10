@@ -2,7 +2,6 @@
 name: BinMerger
 tools: [PC]
 description: Command Line tool to merge CDRWIN cuesheet images with multiple bin files into a single bin images
-external_url: https://thefabulous.co/
 ---
 
 A command Line tool to merge CDRWIN cuesheet images with multiple bin files into a single bin images
