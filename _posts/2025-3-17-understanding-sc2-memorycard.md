@@ -68,64 +68,231 @@ There are two versions of dongleman. the one found on bootrom `rom0:MCMAN` wich 
 <details>
     <summary>SC2DONGLEMAN Export Table</summary>
 
-function label           | export number
------------------------- | --------------
-`mcman_stub`               | 0
-`mcman_stub`               | 1
-`mcman_stub`               | 2
-`mcman_stub`               | 3
-`mcman_stub`               | 4
-`McDetectCard`             | 5
-`McOpen`                   | 6
-`McClose`                  | 7
-`McRead`                   | 8
-`McWrite`                  | 9
-`McSeek`                   | 10
-`McFormat`                 | 11
-`McGetDir`                 | 12
-`McDelete`                 | 13
-`McFlush`                  | 14
-`McChDir`                  | 15
-`McSetFileInfo`            | 16
-`McEraseBlock`             | 17
-`McReadPage`               | 18
-`McWritePage`              | 19
-`McDataChecksum`           | 20
-`McDetectCard2`            | 21
-`McGetFormat`              | 22
-`McGetEntSpace`            | 23
-`McReplaceBadBlock`        | 24
-`McCloseAll`               | 25
-`mcman_sio2_mtap_get_sl`   | 26
-`mcman_stub`               | 27
-`mcman_stub`               | 28
-`McReadPS1PDACard`         | 29
-`McWritePS1PDACard`        | 30
-`mcman_stub`               | 31
-`mcman_stub`               | 32
-`mcman_stub`               | 33
-`mcman_stub`               | 34
-`mcman_stub`               | 35
-`McUnformat`               | 36
-`McRetOnly`                | 37
-`McGetFreeClusters`        | 38
-`McGetMcType`              | 39
-`McSetPS1CardFlag`         | 40
-`mcman_stub`               | 41
-`McGetModuleInfo`          | 42
-`McGetCardSpec`            | 43
-`McGetFATentry`            | 44
-`McCheckBlock`             | 45
-`McSetFATentry`            | 46
-`McReadDirEntry`           | 47
-`Mc1stCacheEntSetWrFlag`   | 48
-`McCreateDirentry`         | 49
-`McReadCluster`            | 50
-`McFlushCache`             | 51
-`McSetDirEntryState`       | 52
-`mcman_stub`               | 53
+<table>
+    <tr>
+        <th>function label</th>
+        <th>export number</th>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>McDetectCard</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>McOpen</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>McClose</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>McRead</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>McWrite</td>
+        <td>9</td>
+    </tr>
+    <tr>
+        <td>McSeek</td>
+        <td>10</td>
+    </tr>
+    <tr>
+        <td>McFormat</td>
+        <td>11</td>
+    </tr>
+    <tr>
+        <td>McGetDir</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>McDelete</td>
+        <td>13</td>
+    </tr>
+    <tr>
+        <td>McFlush</td>
+        <td>14</td>
+    </tr>
+    <tr>
+        <td>McChDir</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>McSetFileInfo</td>
+        <td>16</td>
+    </tr>
+    <tr>
+        <td>McEraseBlock</td>
+        <td>17</td>
+    </tr>
+    <tr>
+        <td>McReadPage</td>
+        <td>18</td>
+    </tr>
+    <tr>
+        <td>McWritePage</td>
+        <td>19</td>
+    </tr>
+    <tr>
+        <td>McDataChecksum</td>
+        <td>20</td>
+    </tr>
+    <tr>
+        <td>McDetectCard2</td>
+        <td>21</td>
+    </tr>
+    <tr>
+        <td>McGetFormat</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td>McGetEntSpace</td>
+        <td>23</td>
+    </tr>
+    <tr>
+        <td>McReplaceBadBlock</td>
+        <td>24</td>
+    </tr>
+    <tr>
+        <td>McCloseAll</td>
+        <td>25</td>
+    </tr>
+    <tr>
+        <td>mcman_sio2_mtap_get_sl</td>
+        <td>26</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>27</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>28</td>
+    </tr>
+    <tr>
+        <td>McReadPS1PDACard</td>
+        <td>29</td>
+    </tr>
+    <tr>
+        <td>McWritePS1PDACard</td>
+        <td>30</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>31</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>32</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>33</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>34</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>35</td>
+    </tr>
+    <tr>
+        <td>McUnformat</td>
+        <td>36</td>
+    </tr>
+    <tr>
+        <td>McRetOnly</td>
+        <td>37</td>
+    </tr>
+    <tr>
+        <td>McGetFreeClusters</td>
+        <td>38</td>
+    </tr>
+    <tr>
+        <td>McGetMcType</td>
+        <td>39</td>
+    </tr>
+    <tr>
+        <td>McSetPS1CardFlag</td>
+        <td>40</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>41</td>
+    </tr>
+    <tr>
+        <td>McGetModuleInfo</td>
+        <td>42</td>
+    </tr>
+    <tr>
+        <td>McGetCardSpec</td>
+        <td>43</td>
+    </tr>
+    <tr>
+        <td>McGetFATentry</td>
+        <td>44</td>
+    </tr>
+    <tr>
+        <td>McCheckBlock</td>
+        <td>45</td>
+    </tr>
+    <tr>
+        <td>McSetFATentry</td>
+        <td>46</td>
+    </tr>
+    <tr>
+        <td>McReadDirEntry</td>
+        <td>47</td>
+    </tr>
+    <tr>
+        <td>Mc1stCacheEntSetWrFlag</td>
+        <td>48</td>
+    </tr>
+    <tr>
+        <td>McCreateDirentry</td>
+        <td>49</td>
+    </tr>
+    <tr>
+        <td>McReadCluster</td>
+        <td>50</td>
+    </tr>
+    <tr>
+        <td>McFlushCache</td>
+        <td>51</td>
+    </tr>
+    <tr>
+        <td>McSetDirEntryState</td>
+        <td>52</td>
+    </tr>
+    <tr>
+        <td>mcman_stub</td>
+        <td>53</td>
+    </tr>
+</table>
 
 </details>
+
 ## Timeline
 
 Events related to new discoveries about the card will be placed here, to keep a chronological order
