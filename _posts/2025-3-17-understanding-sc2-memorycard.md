@@ -46,12 +46,86 @@ mc0:PSAC05
 Soulcalibur2 Dongles carry the MCSERV module on the dongle root. and the dongleman module goes inside one of the 3 IOPRP images found on the dongle, more specifically: `mc0:IOPRPACM`
 
 Both Dongleman and MCSERV have all the same MD5 Hash across the 3 versions of SC2
+
 ```
 SC21, Ver.A10
 SC22, Ver.A10
 SC23, Ver.A10
 ```
 
+### MCSERV
+
+MCSERV is the RPC service that allows the EE to call MCMAN (DONGLEMAN in this case) exports directly
+
+it seems to be just MCSERV from SCE SDK `3.0.x`. without additional modifications
+
+### DONGLEMAN
+
+DONGLEMAN is a modified version of MCMAN wich has minor modifications to keep up with the changes done to the arcade mechacon, arcade SECRMAN and others.
+
+There are two versions of dongleman. the one found on bootrom `rom0:MCMAN` wich only reads cards on port 0 (dongles) and the game DONGLEMAN. wich reads both ports without issues.
+
+<details>
+    <summary>SC2DONGLEMAN Export Table</summary>
+
+function label           | export number
+------------------------ | --------------
+`mcman_stub`               | 0
+`mcman_stub`               | 1
+`mcman_stub`               | 2
+`mcman_stub`               | 3
+`mcman_stub`               | 4
+`McDetectCard`             | 5
+`McOpen`                   | 6
+`McClose`                  | 7
+`McRead`                   | 8
+`McWrite`                  | 9
+`McSeek`                   | 10
+`McFormat`                 | 11
+`McGetDir`                 | 12
+`McDelete`                 | 13
+`McFlush`                  | 14
+`McChDir`                  | 15
+`McSetFileInfo`            | 16
+`McEraseBlock`             | 17
+`McReadPage`               | 18
+`McWritePage`              | 19
+`McDataChecksum`           | 20
+`McDetectCard2`            | 21
+`McGetFormat`              | 22
+`McGetEntSpace`            | 23
+`McReplaceBadBlock`        | 24
+`McCloseAll`               | 25
+`mcman_sio2_mtap_get_sl`   | 26
+`mcman_stub`               | 27
+`mcman_stub`               | 28
+`McReadPS1PDACard`         | 29
+`McWritePS1PDACard`        | 30
+`mcman_stub`               | 31
+`mcman_stub`               | 32
+`mcman_stub`               | 33
+`mcman_stub`               | 34
+`mcman_stub`               | 35
+`McUnformat`               | 36
+`McRetOnly`                | 37
+`McGetFreeClusters`        | 38
+`McGetMcType`              | 39
+`McSetPS1CardFlag`         | 40
+`mcman_stub`               | 41
+`McGetModuleInfo`          | 42
+`McGetCardSpec`            | 43
+`McGetFATentry`            | 44
+`McCheckBlock`             | 45
+`McSetFATentry`            | 46
+`McReadDirEntry`           | 47
+`Mc1stCacheEntSetWrFlag`   | 48
+`McCreateDirentry`         | 49
+`McReadCluster`            | 50
+`McFlushCache`             | 51
+`McSetDirEntryState`       | 52
+`mcman_stub`               | 53
+
+</details>
 ## Timeline
 
 Events related to new discoveries about the card will be placed here, to keep a chronological order
