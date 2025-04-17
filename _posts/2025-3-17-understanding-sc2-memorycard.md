@@ -15,6 +15,19 @@ color: danger
         <img src ="/assets/pics/conquest_card_back.jpg" class="wow animated fadeIn">
     </div>
 </div>
+Thanks to extraweb1 for the pictures
+<br>
+
+
+{% capture list_items %}
+History
+Magic String
+Related files
+Related drivers
+Timeline
+{% endcapture %}
+{% include elements/list.html title="Table of Contents" type="toc" %}
+
 
 ## History
 
@@ -31,6 +44,9 @@ SoulCalibur II recycles these cards using a custom filesystem (or raw data?) enc
 This card uses a different magic string
 
 ```Memory Card for SoulCaliburII (C)1995 1998 2002 NAMCO LTD.```
+
+the first block of the conquest card only holds this magic string. all the rest is filled (byte filler is `0xFF` usually)
+
 
 ## Related files
 
