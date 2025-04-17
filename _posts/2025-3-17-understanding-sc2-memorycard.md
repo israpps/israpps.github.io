@@ -41,6 +41,17 @@ mc0:PSAC04A
 mc0:PSAC05
 ```
 
+## Related drivers
+
+Soulcalibur2 Dongles carry the MCSERV module on the dongle root. and the dongleman module goes inside one of the 3 IOPRP images found on the dongle, more specifically: `mc0:IOPRPACM`
+
+Both Dongleman and MCSERV have all the same MD5 Hash across the 3 versions of SC2
+```
+SC21, Ver.A10
+SC22, Ver.A10
+SC23, Ver.A10
+```
+
 ## Timeline
 
 Events related to new discoveries about the card will be placed here, to keep a chronological order
