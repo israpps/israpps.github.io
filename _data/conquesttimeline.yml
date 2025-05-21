@@ -4,5 +4,10 @@
 - title: I got a Conquest Card!!!!
   date: 16/4/2025
   description: today I got my hands on a conquest card. thanks so much to @kuze from www.arcade-projects.com/ for this amazing donation. this will allow me to continue with more invasive tests. like manipulating the game dongle to inject software to track down all sent commands to the card and log them into the console UART
-
+- title: Arcade Magicgate on SCPH-10020
+  date: 14/5/2025
+  description: I used to believe that arcade PS2s were authenticating cards on slot2 with retail magicgate... I was Wrong.
+               SCPH-10020 official cards support several keys (Developer, Retail, Arcade and another unknown set of keys)
+               if the cryptography is done by the memory card chip and not the game software, this discovery will prove to be very useful.
+               not to mention that it will be needed for handling conquest cards outside of an arcade PS2 (Be it retail PS2 or the PS3 CECHZM1)
   
