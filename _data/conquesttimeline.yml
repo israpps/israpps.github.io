@@ -10,4 +10,21 @@
                SCPH-10020 official cards support several keys (Developer, Retail, Arcade and another unknown set of keys)
                if the cryptography is done by the memory card chip and not the game software, this discovery will prove to be very useful.
                not to mention that it will be needed for handling conquest cards outside of an arcade PS2 (Be it retail PS2 or the PS3 CECHZM1)
-  
+- title: I'm Back
+  date: 30/7/2025
+  description: sorry for the delay. I've been waiting all this time for a JVS adapter board (those MP007-IONA-US things) from aliexpress, took like 2 months shipping...
+               Well, I'm back on track. so you may see more entries here from time to time.
+- title: the ECC!
+  date: 22/8/2025
+  description: Conquest cards dont use the same algo for ECC data... I've figured out how to calculate this ECC
+- title: unpacking the game code
+  date: 27/8/2025
+  description: with some help, now PS2AC05 (the main game code binary blob) can be decrypted and unpacked. a tool to do this will be released eventually
+- title: a decoy!
+  date: 28/8/2025
+  description: the DONGLEMAN driver inside IOPRPACM was a decoy at the end, the conquest card access is done with customized versions of SIO2MAN, MCSERV and DONGLEMAN embedded on the game 
+               there is still a lot to do, specially considering those CPUDAT files also seem to be more code blobs...
+- title: AT LAST!!!
+  date: 04/9/2025
+  description: for the first time in 23 years, soulcalibur2 conquest mode has been enabled without an original conquest card
+               here you have <a href="https://www.reddit.com/user/WearyAd1849/comments/1n7foe1/for_the_first_time_in_23_years_system246/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button">a recording of the second time it worked</a>

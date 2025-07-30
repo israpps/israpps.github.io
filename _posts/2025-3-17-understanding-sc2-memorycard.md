@@ -35,9 +35,9 @@ This memory card was used by the namco system 246 release of SoulCalibur II for 
 
 A game mode exclusive to this release of the game.
 
-The memory cards used come from the recall campaign sony did during PS2 launch on japan. these cards, had a bug on their controller chips (usually `CXD9585R` & `CXD9585AR`) that corrupted the FAT table of the card filesystem.
+The memory cards used come from [the recall campaign sony did during PS2 launch on japan](https://www.ign.com/articles/2000/03/08/ps2-launch-ps2-memory-card-recall). these cards, had a bug on their controller chips (usually `CXD9585R` & `CXD9585AR`) that corrupted the FAT table of the card filesystem.
 
-SoulCalibur II recycles these cards using a custom filesystem (or raw data?) encrypted page-by-page. as well as custom ECC format (it seems)
+SoulCalibur II recycles these cards using a custom filesystem (or raw data?) encrypted page-by-page. as well as custom ECC format
 
 ## Magic String
 
@@ -46,268 +46,19 @@ This card uses a different magic string
 ```Memory Card for SoulCaliburII (C)1995 1998 2002 NAMCO LTD.```
 
 the first block of the conquest card only holds this magic string. all the rest is filled (byte filler is `0xFF` usually)
-
+the actual data differences begin at card page 32. before this. the contents are exactly the same accross all conquest cards I've seen
 
 ## Related files
+the following files are directly related and a target to REing
 
-Based on talks with ExtraWeb1. it seems like the following files inside the SoulCalibur II Dongle are directly related to the conquest card
-
-```
-mc0:PSAC04A
-mc0:PSAC05
-```
+- `mc0:SCSLOAD`: game launcher. setups some stuff and launches PS2AC05 file (looking for it in the security dongle, developer flash and the game DVD. In that order)
+- `mc0:PSAC05`: main game binary blob, encrypted and RLE compressed.
+- `mc0:IOPRPACM`: decoy IOPRP image containing an unused DONGLEMAN driver
 
 ## Related drivers
+The SIO2MAN, MCSERV and DONGLEMAN drivers used to interface with the conquest card are embedded inside the PS2AC05 binary blob.
 
-Soulcalibur2 Dongles carry the MCSERV module on the dongle root. and the dongleman module goes inside one of the 3 IOPRP images found on the dongle, more specifically: `mc0:IOPRPACM`
-
-Both Dongleman and MCSERV have all the same MD5 Hash across the 3 versions of SC2
-
-```
-SC21, Ver.A10
-SC22, Ver.A10
-SC23, Ver.A10
-```
-
-### MCSERV
-
-MCSERV is the RPC service that allows the EE to call MCMAN (DONGLEMAN in this case) exports directly
-
-it seems to be just MCSERV from SCE SDK `3.0.x`. without additional modifications
-
-### DONGLEMAN
-
-DONGLEMAN is a modified version of MCMAN wich has minor modifications to keep up with the changes done to the arcade mechacon, arcade SECRMAN and others.
-
-There are two versions of dongleman. the one found on bootrom `rom0:MCMAN` wich only reads cards on port 0 (dongles) and the game DONGLEMAN. wich reads both ports without issues.
-
-<details>
-    <summary>SC2DONGLEMAN Export Table</summary>
-
-<table>
-    <tr>
-        <th>function label</th>
-        <th>export number</th>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>0</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>2</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>3</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>4</td>
-    </tr>
-    <tr>
-        <td>McDetectCard</td>
-        <td>5</td>
-    </tr>
-    <tr>
-        <td>McOpen</td>
-        <td>6</td>
-    </tr>
-    <tr>
-        <td>McClose</td>
-        <td>7</td>
-    </tr>
-    <tr>
-        <td>McRead</td>
-        <td>8</td>
-    </tr>
-    <tr>
-        <td>McWrite</td>
-        <td>9</td>
-    </tr>
-    <tr>
-        <td>McSeek</td>
-        <td>10</td>
-    </tr>
-    <tr>
-        <td>McFormat</td>
-        <td>11</td>
-    </tr>
-    <tr>
-        <td>McGetDir</td>
-        <td>12</td>
-    </tr>
-    <tr>
-        <td>McDelete</td>
-        <td>13</td>
-    </tr>
-    <tr>
-        <td>McFlush</td>
-        <td>14</td>
-    </tr>
-    <tr>
-        <td>McChDir</td>
-        <td>15</td>
-    </tr>
-    <tr>
-        <td>McSetFileInfo</td>
-        <td>16</td>
-    </tr>
-    <tr>
-        <td>McEraseBlock</td>
-        <td>17</td>
-    </tr>
-    <tr>
-        <td>McReadPage</td>
-        <td>18</td>
-    </tr>
-    <tr>
-        <td>McWritePage</td>
-        <td>19</td>
-    </tr>
-    <tr>
-        <td>McDataChecksum</td>
-        <td>20</td>
-    </tr>
-    <tr>
-        <td>McDetectCard2</td>
-        <td>21</td>
-    </tr>
-    <tr>
-        <td>McGetFormat</td>
-        <td>22</td>
-    </tr>
-    <tr>
-        <td>McGetEntSpace</td>
-        <td>23</td>
-    </tr>
-    <tr>
-        <td>McReplaceBadBlock</td>
-        <td>24</td>
-    </tr>
-    <tr>
-        <td>McCloseAll</td>
-        <td>25</td>
-    </tr>
-    <tr>
-        <td>mcman_sio2_mtap_get_sl</td>
-        <td>26</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>27</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>28</td>
-    </tr>
-    <tr>
-        <td>McReadPS1PDACard</td>
-        <td>29</td>
-    </tr>
-    <tr>
-        <td>McWritePS1PDACard</td>
-        <td>30</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>31</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>32</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>33</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>34</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>35</td>
-    </tr>
-    <tr>
-        <td>McUnformat</td>
-        <td>36</td>
-    </tr>
-    <tr>
-        <td>McRetOnly</td>
-        <td>37</td>
-    </tr>
-    <tr>
-        <td>McGetFreeClusters</td>
-        <td>38</td>
-    </tr>
-    <tr>
-        <td>McGetMcType</td>
-        <td>39</td>
-    </tr>
-    <tr>
-        <td>McSetPS1CardFlag</td>
-        <td>40</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>41</td>
-    </tr>
-    <tr>
-        <td>McGetModuleInfo</td>
-        <td>42</td>
-    </tr>
-    <tr>
-        <td>McGetCardSpec</td>
-        <td>43</td>
-    </tr>
-    <tr>
-        <td>McGetFATentry</td>
-        <td>44</td>
-    </tr>
-    <tr>
-        <td>McCheckBlock</td>
-        <td>45</td>
-    </tr>
-    <tr>
-        <td>McSetFATentry</td>
-        <td>46</td>
-    </tr>
-    <tr>
-        <td>McReadDirEntry</td>
-        <td>47</td>
-    </tr>
-    <tr>
-        <td>Mc1stCacheEntSetWrFlag</td>
-        <td>48</td>
-    </tr>
-    <tr>
-        <td>McCreateDirentry</td>
-        <td>49</td>
-    </tr>
-    <tr>
-        <td>McReadCluster</td>
-        <td>50</td>
-    </tr>
-    <tr>
-        <td>McFlushCache</td>
-        <td>51</td>
-    </tr>
-    <tr>
-        <td>McSetDirEntryState</td>
-        <td>52</td>
-    </tr>
-    <tr>
-        <td>mcman_stub</td>
-        <td>53</td>
-    </tr>
-</table>
-
-</details>
+`mc0:IOPRPACM` is actually a decoy. the image is not even used, and the dongleman driver inside is most likely left to confuse
 
 ## Timeline
 
