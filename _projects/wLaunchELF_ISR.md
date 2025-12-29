@@ -45,6 +45,7 @@ function update() {
   if (form.no_network.checked) bits.push("-NO_NETWORK");
   if (form.mx4sio.checked) bits.push("-MX4SIO");
   if (form.mmce.checked) bits.push("-MMCE");
+  if (form.xfrom.checked) bits.push("-XFROM");
   bits.push(".ELF");
   var url = bits.join("");
   document.getElementById("wledl").setAttribute("href",url);
@@ -82,8 +83,7 @@ update();
       <label><input type="checkbox" role="switch" name="mmce" data-toggle="tooltip" data-placement="left" title="Support for browsing the SDCard of SD2PSX, MemcardPro2 and similar devices" onclick="switchmmc(1)"> MMCE</label> 
     </div>
     <div class="col-sm">
-      SOON
-      <!--<label><input type="checkbox" role="switch" name="dvrp" data-toggle="tooltip" data-placement="left" title="Support for browsing the Encrypted DVR Area of a PSX DESR HardDrive"> DVR</label> -->
+      <label><input type="checkbox" role="switch" name="xfrom" data-toggle="tooltip" data-placement="left" title="Support for browsing the boot NAND of a PSX DVR unit" onclick="switchmmc(1)"> XFROM</label> 
     </div>
   </div>
 </div>
