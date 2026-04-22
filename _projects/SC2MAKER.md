@@ -2,7 +2,7 @@
 name: SC2Maker
 description: convert SCPH-10020 PlayStation2 memory cards into System246 SoulCalibur2 Conquest Cards
 image: "https://raw.githubusercontent.com/israpps/SC2MAKER/refs/heads/gh_pages/img/banner.png"
-tools: [PS2, System246]
+tools: [PS2, System246, System256]
 style: border
 color: primary
 ---
