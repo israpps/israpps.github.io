@@ -7,13 +7,12 @@ style: border
 color: primary
 ---
 
-# SC2MAKER
+# PCSX2x6 
 
-About
-Program to convert PS2 memory cards into System246 SoulCalibur2 Conquest Card
+> PCSX2 modification to emulate the namco system246, system256 and system super256 pmatforms. which were based on the official ps2 division for arcades (COH-H models)
+![GitHub Downloads](https://img.shields.io/github/downloads/ps2homebrew-arcade/pcsx2x6/total?style=for-the-badge&logo=github&logoColor=white&labelColor=black)
 
-![GitHub Downloads](https://img.shields.io/github/downloads/israpps/SC2MAKER/total?style=for-the-badge&logo=github&logoColor=white&labelColor=black)
-
+## links of interest
 
 [Download](https://github.com/PS2Homebrew-arcade/pcsx2x6/releases){: .btn .btn-outline-danger }
 [Github Repository](https://github.com/PS2Homebrew-arcade/pcsx2x6){: .btn .btn-outline-danger }
