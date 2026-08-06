@@ -110,3 +110,8 @@ discordserver:
   url  : https://tinyurl.com/
   icon : fab fa-discord
   color: 5865F2
+
+kofi:
+  url: https://ko-fi.com/
+  icon: fab fa-ko-fi
+  color: FF6433
